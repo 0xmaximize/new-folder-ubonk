@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Eudoxus Sans", sans-serif;
+    scroll-behavior: smooth;
+  }
+
+
+  .bg-hero {
+    background-image: url("../public/unbk.jpg");
+    background-size: cover;
+    width: full;
+    height: 110vh;
+  }
+  .cards1 {
+    background-image: url("../public/cardx1.png");
+    background-size: cover;
+    width: full;
+  }
+
+  .cards2 {
+    background-image: url("../public/cardx2.png");
+    background-size: cover;
+    width: full;
+  }
+
+
+  .connectBtn {
+    width: 100%!important;
+    background: white!important;
+  }   
+
+  @media screen and (max-width: 1200px) {
+    .bg-hero {
+      background-image: url("../public/unbk.jpg");
+      background-size: cover;
+      width: full;
+      height: 70vh;
+    }
+  }
+  
+
+@media screen and (max-width: 720px) {
+  .bg-hero {
+    background-image: url("../public/unbk.jpg");
+    background-size: cover;
+    width: full;
+    overflow:hidden;
+    height: auto;
+  }
+}
