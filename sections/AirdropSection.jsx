@@ -1,12 +1,13 @@
 // 'use client'
 import styles from "../styles";
-import { Button, Divider, Card } from "@nextui-org/react";
+import { Button, Divider, Image, Spacer } from "@nextui-org/react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { useWallet } from "@solana/wallet-adapter-react";
 import { useEffect, useState } from "react";
 import { Connection, PublicKey } from "@solana/web3.js";
 import { Token, TOKEN_PROGRAM_ID } from "@solana/spl-token";
 import { FaCircleCheck, FaCircleXmark } from "react-icons/fa6";
+import logo from '../public/UBONK.png';
 
 const AirdropSection = () => {
   const { connected, publicKey, disconnect } = useWallet();
@@ -98,7 +99,7 @@ const AirdropSection = () => {
   };
   
   return (
-    <section className={`justify-center items-center my-20 py-20`}>
+    <section className={` flex justify-center items-center my-20 lg:py-20`}>
 
       <div className={`${styles.xPadding} text-white lg:mx-3 px-3 z-10`}>
         <div className="flex justify-center items-center ">
@@ -117,9 +118,9 @@ const AirdropSection = () => {
                       <h4 className="text-center py-4">Congratulations, you received</h4>
                       <div className="flex justify-center items-center gap-2  ">
                         <h4 className="text-center font-extrabold text-white text-4xl md:text-4xl lg:text-6xl">
-                        {ubonkBalance > 1000 ? '500.000' : 'Not Eligible'}
+                        {ubonkBalance > 1000 ? '500.000' : '0'}
                         </h4>
-                        <img src='UBONK.png' alt=''  className="w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] object-contain"/>
+                        <Image src='https://pbs.twimg.com/profile_images/1739437848531734528/--HAtlIr_400x400.jpg' alt=''  className="w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] rounded-full object-contain"/>
                       </div>
                       
                       <div className=' justify-center items-center '>
@@ -149,11 +150,20 @@ const AirdropSection = () => {
                           </div>
 
                           <div className="flex border-b border-slate-300/20">
-                            <div className="flex-1 border-r border-gray-300/20 p-4 text-center">Discord OG</div>
+                            <div className="flex-1 border-r border-gray-300/20 p-4 text-center">Hold WEN</div>
+                            <div className="flex-1 p-4 text-center flex justify-center items-center"> <FaCircleXmark className='text-gray-600/75 '/></div>
+                          </div>
+                         
+                          <div className="flex border-b border-slate-300/20">
+                            <div className="flex-1 border-r border-gray-300/20 p-4 text-center">Hold NFT</div>
+                            <div className="flex-1 p-4 text-center flex justify-center items-center"> <FaCircleXmark className='text-gray-600/75 '/></div>
+                          </div>
+                          <div className="flex border-b border-slate-300/20">
+                            <div className="flex-1 border-r border-gray-300/20 p-4 text-center">Airdrop Whitelist</div>
                             <div className="flex-1 p-4 text-center flex justify-center items-center"> <FaCircleXmark className='text-gray-600/75 '/></div>
                           </div>
                           <div className="flex">
-                            <div className="flex-1 border-r border-gray-300/20 p-4 text-center">Airdrop Forms</div>
+                            <div className="flex-1 border-r border-gray-300/20 p-4 text-center">Early Contributor</div>
                             <div className="flex-1 p-4 text-center flex justify-center items-center"> <FaCircleXmark className='text-gray-600/75 '/></div>
                           </div>
                         </div>
@@ -182,7 +192,7 @@ const AirdropSection = () => {
                         <span className="text-white/50 text-sm text-center">Connect wallet to enter an airdrop</span>
                       </div>
                       <div className="flex justify-center items-center">
-                        <WalletMultiButton style={{ padding: '30px', paddingLeft: '50px', paddingRight: '50px', background: '#d17f2c', borderRadius: '10px' }}> Enter Airdrop </WalletMultiButton>
+                        <WalletMultiButton style={{ padding: '30px', paddingLeft: '50px', paddingRight: '50px', background: '#d17f2c', borderRadius: '10px' }}> Connect </WalletMultiButton>
                       </div>
                     </div>
                   </>
@@ -192,7 +202,6 @@ const AirdropSection = () => {
           </div>
         </div>
       </div>
-
     </section>
   );
 };

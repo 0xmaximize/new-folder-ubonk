@@ -30,6 +30,7 @@ import { CgArrowTopRight  } from "react-icons/cg";
 import { Ticker } from "../components";
 
 const DynamicChart = dynamic(() => import("react-apexcharts"), { ssr: false });
+const DynamicTicker = dynamic(() => import('../components/Ticker'), { ssr: false });
 
 const icons = {
   spinner:  <Spinner size={22}/>,
@@ -46,7 +47,7 @@ const Buy = () => {
   const [txStatus, setTxStatus] = useState(''); 
   const [processing, setProcessing] = useState(false); 
   
-  const SOLToUBONKConversionRate = 40000000;
+  const SOLToUBONKConversionRate = 5155729;
 
   useEffect(() => {
     const getBalances = async () => {
@@ -124,7 +125,7 @@ const Buy = () => {
   };
 
   const [chartOptions, setChartOptions] = useState({
-    series: [45, 5, 5, 15, 30], 
+    series: [49, 25, 4, 16, 6], 
     options: {
       chart: {
         type: 'donut',
@@ -138,8 +139,8 @@ const Buy = () => {
       stroke: {
         colors: 'transparent'
       },
-      colors: ['#c25632','#f502a4','#f5bb64', '#195956', '#2b91ab'], 
-      labels: ['Liquidity', 'Marketing', 'Airdrop', 'Treasury', 'Presale'],
+      colors: ['#fa8b69','#f78d36','#ffd3a1', '#f0b5a3', '#fce3c0'], 
+      labels: ['Liquidity', 'Presale', 'Early Contributor ', 'Staking Reward', 'Airdrop'],
       legend: {
         position: 'right',
         fontWeight: 500,
@@ -248,13 +249,13 @@ const Buy = () => {
                   <h4 className="text-sm">Token Supply</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm">98.990.000.000</h4>
+                  <h4 className="text-sm">98,990,000,000 UBONK</h4>
               </div>
               <div className="hidden md:flex justify-between text-white">
                   <h4 className="text-sm">Presale Allocation</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm "> 44.000.000.000 UBONK</h4>
+                  <h4 className="text-sm "> 3.093.437.500 UBONK</h4>
               </div>
               
 
@@ -262,42 +263,41 @@ const Buy = () => {
                   <h4 className="text-sm">Softcap</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm "> 100 SOL</h4>
+                  <h4 className="text-sm "> 150 SOL</h4>
               </div>
 
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">Hardcap</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm "> 200 SOL</h4>
+                  <h4 className="text-sm "> 600 SOL</h4>
               </div>
          
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">Presale rate</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm "> 1 SOL = 40.000.000 UBONK</h4>
+                  <h4 className="text-sm "> 1 SOL = 5.155.729 UBONK</h4>
               </div>
-             
+           
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">Start time</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm ">2024.03.11 - 13:00 {'(UTC)'}</h4>
+                  <h4 className="text-sm ">2024.03.14 13:00 {'(UTC)'} </h4>
               </div>
 
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">End time</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm ">2024.03.14 - 13:00 {'(UTC)'}</h4>
+                  <h4 className="text-sm ">2024.03.17 13:00 {'(UTC)'}</h4>
               </div>
               
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">Contract Address</h4>
                   
                   <Link href='https://solscan.io/token/8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5' target='_blank'>
-
                     <h4 className="text-sm hidden md:flex  items-center text-orange-200 hover:text-orange-300">8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5 <CgArrowTopRight   size={20}/></h4>
                   <h4 className="text-sm md:hidden flex  items-center text-orange-200 hover:text-orange-300">8QcA6zp6Q..tUmKKTMjq5 <CgArrowTopRight   size={20}/></h4>
                   </Link>
@@ -309,7 +309,7 @@ const Buy = () => {
       <div className="grid gap-4">
       <Card className="bg-gray-800 lg:w-[400px] border-gray-800">
           <CardHeader className="flex justify-center items-center">
-          <Ticker endTime="2024-03-12T13:00:00Z" />
+          <DynamicTicker endTime="2024-03-14T13:00:00Z" />
           </CardHeader>
           <div className="mx-5">
           <Progress
@@ -319,14 +319,13 @@ const Buy = () => {
               base:'py-4',
               indicator: "bg-gradient-to-r from-green-500 to-orange-500",
             }}
-         
             className="max-w-full"
           />
           </div>
+
           <div className="flex justify-between px-5 mt-[-4px]">
             <h4 className="font-bold text-sm text-orange-200">0 SOL</h4>
-            <h4 className="font-bold text-sm text-orange-200">222 SOL</h4>
-
+            <h4 className="font-bold text-sm text-orange-200">600 SOL</h4>
           </div>
           <CardBody>
           {connected && (
@@ -388,8 +387,8 @@ const Buy = () => {
                 size='md'
 
                 className="px-4  mx-4 py-4 my-4 mb-4 bg-[#d17f2c] hover:bg-orange-400 text-orange-800/75 hover:text-orange-100 font-semibold"
-                isDisabled
-                /* isDisabled={!!txSig || parseFloat(solAmount) < 0.1 || solAmount.trim() === ''} */ 
+                
+                isDisabled={!!txSig || parseFloat(solAmount) < 0.000001 || solAmount.trim() === ''} 
                 >
                 {txSig ? 'Loading' : 'Buy with SOL'}
                 {txSig && icons.spinner}
@@ -398,7 +397,7 @@ const Buy = () => {
             ):(
               <>
                <CardFooter className="w-full justify-start items-center mb-4">
-                <WalletMultiButton style={{background:'#d17f2c',  borderRadius:'10px'}}> Connect  Wallet</WalletMultiButton>
+                <WalletMultiButton style={{background:'#f97316',  borderRadius:'10px'}}> Connect  Wallet</WalletMultiButton>
                 </CardFooter>
               </>
             )}

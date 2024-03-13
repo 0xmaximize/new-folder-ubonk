@@ -40,8 +40,8 @@ const icons = {
 const Community = () => {
   return (
     <section className={`${styles.Upadding} lg:mx-20 lg:px-20`}>
-      <div className={`${styles.xPadding}  mx-4 md:px-4 `}>
-        <div className="grid md:flex md:justify-center lg:justify-between items-center">    
+      <div className={`${styles.xPadding}  mx-4 md:px-4  `}>
+        <div className="grid md:flex md:justify-center lg:justify-around items-center">    
             <div className="text-start">
               <span className='text-white/50  md:text-[16px] font-black'>
                   UNIBONK COMMUNITY

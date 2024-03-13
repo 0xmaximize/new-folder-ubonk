@@ -2,46 +2,48 @@ import { useState, useEffect } from 'react';
 
 const Ticker = ({ endTime }) => {
   const calculateTimeLeft = () => {
-    const difference = new Date(endTime) - new Date();
-    let timeLeft = {};
+    const currentTime = new Date();
+    const endDateTime = new Date(endTime);
+    const difference = endDateTime - currentTime;
 
-    if (difference > 0) {
-      timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-        minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((difference % (1000 * 60)) / 1000),
-      };
-    }
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-    return timeLeft;
+    return {
+      days,
+      hours,
+      minutes,
+      seconds,
+    };
   };
 
   const formatTimeUnit = (unit) => (unit ? unit.toString().padStart(2, '0') : '00');
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    return () => clearTimeout(timer);
-  });
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className="text-center">
       <h4 className="text-white font-bold">Presale starts in</h4>
       <div className="flex gap-4 mt-4">
-        <div className="bg-orange-400 p-2 rounded-md w-[40px]">
+        <div className="bg-orange-500 p-2 rounded-md w-[40px]">
           <h4 className="font-bold text-orange-100">{formatTimeUnit(timeLeft.days)}</h4>
         </div>
-        <div className="bg-orange-400 p-2 rounded-md w-[40px]">
+        <div className="bg-orange-500 p-2 rounded-md w-[40px]">
           <h4 className="font-bold text-white">{formatTimeUnit(timeLeft.hours)}</h4>
         </div>
-        <div className="bg-orange-400 p-2 rounded-md w-[40px]">
+        <div className="bg-orange-500 p-2 rounded-md w-[40px]">
           <h4 className="font-bold text-white">{formatTimeUnit(timeLeft.minutes)}</h4>
         </div>
-        <div className="bg-orange-400 p-2 rounded-md w-[40px]">
+        <div className="bg-orange-500 p-2 rounded-md w-[40px]">
           <h4 className="font-bold text-white">{formatTimeUnit(timeLeft.seconds)}</h4>
         </div>
       </div>

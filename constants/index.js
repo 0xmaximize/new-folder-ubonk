@@ -2,22 +2,24 @@
 
 export const ServiceData = [
   {
-    title: "Development",
-    content: "Lorem ipsum dolor sit /amet, consectetur adipiscing elit.",
+    title: "AIRDROP",
+    content: "UBONK AIRDROP NOW LIVE",
     image: 'insight2.png',
   },
   {
-    title: "Branding",
-    image: 'insight1.png',
+    title: "PRESALE",
+    content:"UBONK Presale Announcement",
+    image: 'card1.png',
   },
   {
-    title: "Design",
+    title: "COLLECTION",
+    content:"Launch UBONK NFTs",
     image: 'insight3.png',
   },
   {
-    title: "Design",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image: 'design3.jpg',
+    title: "UBONK",
+    content: "UBONK Coin on mainnet",
+    image: 'insight4.png',
   },
  
 ];
@@ -42,12 +44,12 @@ export const communityLinks = [
 export const exploreLinks = [
   {
     
-    title: "Contact us",
+    title: "Docs",
     to:"/"
   },
   {
     
-    title: "help@unibonk.meme",
+    title: "Support",
     to:"/"
   },
   
@@ -80,6 +82,10 @@ export const learnLinks = [
   
   {
     title: "UBONK BOTs",
+    to:"/"
+  },
+  {
+    title: "UBONK NFT",
     to:"/"
   },
 ]

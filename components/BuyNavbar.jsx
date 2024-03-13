@@ -26,21 +26,19 @@ export default function BuyNavbar() {
   };
   
   return (
-    <section className='w-full bg-gray-900 z-10'>
+    <section className='w-full lg:px-20 z-10'>
       <div className="flex justify-between mx-4 md:mx-6 lg:mx-20 lg:px-20  py-4">
-        <div className="flex items-center justify-between md:gap-4 lg:gap-20">
-          <RiMenuFill   className='flex md:hidden text-white' size={40} />
+        <div className="flex items-center justify-between ">
           <Link href='/'>
-            <div className="hidden md:flex  justify-center items-center gap-2 ">
-              <Image src='UBONK.png' alt=''  className="w-[50px] h-[50px] lg:w-[30px] lg:h-[30px] object-contain"/>
-              <h4 className="font-extrabold text-white text-2xl">UNIBONK</h4>
+            <div className=" flex  justify-center items-center ">
+              <Image src='https://svgur.com/i/14Hw.svg' alt=''  className="w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] rounded-full object-contain"/>
+              <h4 className="font-extrabold text-white lg:text-2xl">UNIBONK</h4>
             </div>
           </Link>
         </div>
-       
         <div className="flex justify-start items-center gap-4">
            <div className="z-10">
-           <WalletMultiButton style={{background:'#d17f2c', borderRadius:'10px'}}/>
+           <WalletMultiButton style={{background:'#d17f2c', borderRadius:'10px'}} />
            </div>
         </div>
       </div>

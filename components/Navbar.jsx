@@ -6,10 +6,12 @@ import {
 import { ChevronDown } from "./Icon.jsx";
 import Link from "next/link";
 import { useRouter } from 'next/router';
-import { RiMenuFill } from 'react-icons/ri'
 import { BsDiscord, BsTwitterX , } from "react-icons/bs";
 import { BiLogoTelegram } from "react-icons/bi";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+import { TbMenuOrder } from "react-icons/tb";
+import { CiMenuKebab } from "react-icons/ci";
+import { FaArrowRight  } from 'react-icons/fa';
 
 
 export default function Navbar() {
@@ -27,41 +29,32 @@ export default function Navbar() {
   
   return (
     <section className='w-full bg-gray-900'>
-      <div className="flex justify-between mx-4 md:mx-6 lg:mx-20 lg:px-20  py-4">
+      <div className="flex justify-between mx-2 md:mx-6 lg:mx-20 lg:px-20  py-4">
         <div className="flex items-center justify-between md:gap-4 lg:gap-20">
-          <RiMenuFill   className='flex md:hidden text-white' size={40} />
+         
           <Link href='/'>
-            <div className="hidden md:flex  justify-center items-center gap-2 ">
-              <Image src='UBONK.png' alt=''  className="w-[50px] h-[50px] lg:w-[30px] lg:h-[30px] object-contain"/>
-              <h4 className="font-extrabold text-white text-2xl">UNIBONK</h4>
+          <div className=" flex  justify-center items-center ">
+              <Image src='https://svgur.com/i/14Hw.svg' alt=''  className="w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] rounded-full object-contain"/>
+              <h4 className="font-extrabold text-white text-xl lg:text-2xl">UNIBONK</h4>
             </div>
           </Link>
         </div>
         <ul className="text-white lg:gap-1 hidden md:hidden lg:flex  justify-center items-center">
-          <li className="">
-            <Button  className="text-white/50 hover:text-white bg-transparent hover:bg-orange-400/70 text-[18px]">UBONK Coin</Button>
-          </li>
+          <Link href='https://birdeye.so/token/8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5?chain=solana'>
+            <Button  className="text-white/50 hover:text-white bg-transparent hover:bg-orange-400/70 text-[18px]">UBONK</Button>
+          </Link>
           <li className="">
           <Link href="/ubonk" target='_blank'>
-          
             <Button  className="text-white/50 hover:text-white bg-transparent hover:bg-orange-400/70 text-[18px]">Presale</Button>
             </Link>
           </li>
           <li className="">
-          <Popover placement="bottom">
-            <PopoverTrigger>
             <Button  className="text-white/50 hover:text-white bg-transparent hover:bg-orange-400/70 text-[18px]">Wallet</Button>
-            </PopoverTrigger>
-            <PopoverContent>
-              <div className="px-1 py-2">
-                <div className="text-small font-bold">Coming Soon</div>
-              </div>
-          </PopoverContent>
-        </Popover>
           </li>
             <li className="">
               <Button className="text-white/50 hover:text-white bg-transparent hover:bg-orange-400/70 text-[18px]">BOTs</Button>
             </li>
+            
             <li className="">
               <Button className="text-white/50 hover:text-white bg-transparent hover:bg-orange-400/70 text-[18px]">Docs</Button>
             </li>
@@ -78,8 +71,11 @@ export default function Navbar() {
               <Button variant="light" isIconOnly className="text-white/50 hover:text-white" startContent={<BiLogoTelegram size={20} />}/>
             </Link>
           </div>  
-           <div className="z-10">
-           <WalletMultiButton style={{background:'#d17f2c', borderRadius:'10px'}}/>
+           <div className="flex  items-center gap-1 z-10">
+           <Link href='/ubonk'>
+           <Button size="lg"  radius="md"  className="bg-orange-500 hover:bg-orange-400 text-orange-800/75 hover:text-orange-100 font-semibold"> BUY UBONK</Button>
+          </Link>
+           <CiMenuKebab className='flex text-orange-400 lg:hidden ' size={20} />
            </div>
         </div>
       </div>

@@ -12,8 +12,8 @@ function Footer() {
 	<>
 	<footer className={`${styles.footer} bg-gray-900 overflow-hidden `}>
 		<Divider className="mb-4 bg-white/10 lg:mt-20  " />
-		<div className="grid grid-cols-1 lg:mx-20 md:flex justify-between items-start mb-4 py-2 gap-10 md:px-10">
-		<div className=' '>
+		<div className="grid md:grid-cols-2 lg:mx-20  justify-between items-start mb-4 py-2 gap-10 md:px-10">
+		<div className='grid'>
 			<p className='font-bold text-white text-[20px]'>
 			UNIBONK COIN
 			</p>
@@ -29,7 +29,7 @@ function Footer() {
 				))}
 			</ul>
 			<ul>
-				<span aria-label="Trade" className='font-bold text-white text-xl  mb-2'>Support</span>
+				<span aria-label="Trade" className='font-bold text-white text-xl  mb-2'>Help</span>
 				{exploreLinks.map((data) => (
 					<li key='Trade' className='my-2 text-gray-500 hover:text-white'>{data.title}</li>
 				))}
@@ -41,7 +41,7 @@ function Footer() {
 				))}   
 			</ul>
 			<ul>
-				<span aria-label="Trade" className='font-bold text-white text-xl  mb-2'>Community</span>
+				<span aria-label="Trade" className='font-bold text-white text-xl  mb-2'>Follow us</span>
 				{communityLinks.map((data) => (
 					<li key='Trade' className='my-2 text-gray-500 hover:text-white'>{data.title}</li>
 				))}

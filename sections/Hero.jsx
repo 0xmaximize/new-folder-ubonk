@@ -1,21 +1,13 @@
 'use client';
 import { motion } from 'framer-motion';
 import styles from '../styles';
-import { Button, Card, CardBody, CardFooter, CardHeader, Divider } from '@nextui-org/react';
-import EncryptButtons from '../components/EncryptButton';
-import Typewriter from 'typewriter-effect';
+import { Button, Link} from '@nextui-org/react';
 import { fadeIn, slideIn } from '../utils/motion';
-import { HomeIcon, ScanIcon, Scale, ArrowTopRight } from '../components/Icon';
 import { FaArrowRight, FaArrowDown  } from 'react-icons/fa';
-import { LuDog } from "react-icons/lu";
 
 const icons = {
-  home:  <HomeIcon size={22}/>,
-  scan:  <ScanIcon size={22}/>,
-  scale:  <Scale size={22}/>,
   down: <FaArrowDown size={14}  />,
   arrow: <FaArrowRight  size={16} />,
-  dog: <LuDog size={20} />
 };
 
 
@@ -49,12 +41,21 @@ function Hero() {
                 Unibonk is a meme decentralized-token  based on solana a better part in the future!
           </motion.span>
           <div className=' justify-center gap-4 my-20 flex md:hidden'>
-            <Button radius='md' size='md' className='bg-orange-500 hover:bg-orange-400 text-orange-800/75 hover:text-orange-100 font-semibold' endContent={icons.arrow}>Get UBONK</Button>
-            <Button variant='ghost' size='md' radius='md' color='bg-orange-500'  className='bg-transparent hover:bg-orange-500 border-orange-500 text-orange-100 hover:text-orange-100 font-semibold' endContent={icons.arrow}>Tokenomics</Button>
+            <Link href='/ubonk' target='_blank'>
+              <Button radius='md' size='md' className='bg-orange-500 hover:bg-orange-300 text-orange-800/75 hover:text-orange-100 font-semibold' endContent={icons.arrow}>Get UBONK</Button>
+            </Link>
+            <Link href='https://docs.unibonk.meme/ubonk-coin/tokenomics' target='_blank'>
+              <Button variant='ghost' size='md' radius='md' color='bg-orange-500'  className='bg-transparent hover:bg-orange-500 border-orange-500 text-orange-100 hover:text-orange-100 font-semibold' endContent={icons.arrow}>Tokenomics</Button>
+            </Link>
           </div>
           <div className=' justify-center gap-4 my-20 hidden md:flex'>
+            <Link href='/ubonk' target='_blank'>
             <Button radius='md' size='lg' className='bg-orange-500 hover:bg-orange-400 text-orange-800/75 hover:text-orange-100 font-semibold' endContent={icons.arrow}>Get UBONK</Button>
+            </Link>
+            <Link href='https://docs.unibonk.meme/ubonk-coin/tokenomics' target='_blank'>
             <Button variant='ghost' radius='md' color='bg-orange-500' size='lg' className='bg-transparent hover:bg-orange-500 border-orange-500 text-orange-100 hover:text-orange-100 font-semibold' endContent={icons.arrow}>Tokenomics</Button>
+            </Link>
+
           </div>
         </div>  
       </div>
