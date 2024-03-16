@@ -17,6 +17,12 @@
     width: full;
     height: 110vh;
   }
+  .bg-cards {
+    background-image: url("../public/bgcard.png");
+    background-size: cover;
+    width: full;
+
+  }
   .cards1 {
     background-image: url("../public/cardx1.png");
     background-size: cover;

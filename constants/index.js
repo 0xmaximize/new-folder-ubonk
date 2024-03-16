@@ -5,11 +5,13 @@ export const ServiceData = [
     title: "AIRDROP",
     content: "UBONK AIRDROP NOW LIVE",
     image: 'insight2.png',
+    to:'/airdrop'
   },
   {
     title: "PRESALE",
     content:"UBONK Presale Announcement",
     image: 'card1.png',
+    to:'https://medium.com/@unibonk/ubonk-presale-an-5960090cc1ec'
   },
   {
     title: "COLLECTION",
@@ -27,15 +29,15 @@ export const ServiceData = [
 export const communityLinks = [
   {
     title: "Discord",
-    to:"/"
+    to:"https://discord.gg/rgTsdr5mV4"
   },
   {
     title: "Twitter",
-    to:"/"
+    to:"https://twitter.com/unibonk"
   },
   {
     title: "Telegram",
-    to:"/"
+    to:"https://t.me/unibonk"
   },
 
 
@@ -45,12 +47,12 @@ export const exploreLinks = [
   {
     
     title: "Docs",
-    to:"/"
+    to:"https://docs.unibonk.meme"
   },
   {
     
     title: "Support",
-    to:"/"
+    to:"https://discord.gg/rgTsdr5mV4"
   },
   
 ]
@@ -59,29 +61,29 @@ export const exploreLinks = [
 export const usageLinks = [
  
   {
-    title: "Whitepaper",
-    to:"/"
+    title: "Solscan",
+    to:"https://solscan.io/token/8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5"
   },
 
   {
-    title: "Privacy Policy",
-    to:"/"
+    title: "Birdeye",
+    to:"https://birdeye.so/token/8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5?chain=solana"
   }
 
 ]
 
 export const learnLinks = [
   {
-    title: "UBONK Swap",
+    title: "UNIBONK Swap",
     to:"/"
   },
   {
-    title: "UBONK Wallet",
+    title: "UNIBONK Wallet",
     to:"/"
   },
   
   {
-    title: "UBONK BOTs",
+    title: " BOTs",
     to:"/"
   },
   {

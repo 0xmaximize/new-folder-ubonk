@@ -13,8 +13,9 @@ const AirdropSection = () => {
   const { connected, publicKey, disconnect } = useWallet();
   const [solBalance, setSolBalance] = useState(null);
   const [ubonkBalance, setUbonkBalance] = useState(null);
+  const [jupBalance, setJupBalance] = useState(null);
   const [bonkBalance, setBonkBalance] = useState(null);
-  const [specificTokenBalance, setSpecificTokenBalance] = useState(null);
+  const [wenBalance, setWenBalance] = useState(null);
 
   useEffect(() => {
     const getBalances = async () => {
@@ -27,25 +28,35 @@ const AirdropSection = () => {
         const solBalance = await connection.getBalance(publicKey);
         setSolBalance(solBalance / 10 ** 9);
     
-        // Use await to handle the asynchronous operation
         try {
-          const bonkBalance = await getBonkBalance(publicKey);
+          const bonkBalance = await getTokenBalance(publicKey, 'DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263');
           setBonkBalance(parseFloat(bonkBalance));
-          setSpecificTokenBalance(parseFloat(bonkBalance));
         } catch (error) {
           console.error("Error fetching BONK balance:", error);
           setBonkBalance(0);
-          setSpecificTokenBalance(0);
         }
-        // Use await to handle the asynchronous operation
+        
         try {
-          const ubonkBalance = await getUbonkBalance(publicKey);
+          const ubonkBalance = await getTokenBalance(publicKey, '8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5');
           setUbonkBalance(parseFloat(ubonkBalance));
-          setSpecificTokenBalance(parseFloat(ubonkBalance));
         } catch (error) {
           console.error("Error fetching UBONK balance:", error);
           setUbonkBalance(0);
-          setSpecificTokenBalance(0);
+        }
+        try {
+          const jupBalance = await getTokenBalance(publicKey, 'JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN');
+          setJupBalance(parseFloat(jupBalance));
+        } catch (error) {
+          console.error("Error fetching JUP balance:", error);
+          setJupBalance(0);
+        }
+
+        try {
+          const wenBalance = await getTokenBalance(publicKey, 'WENWENvqqNya429ubCdR81ZmD69brwQaaBYY6p3LCpk');
+          setWenBalance(parseFloat(wenBalance));
+        } catch (error) {
+          console.error("Error fetching WEN balance:", error);
+          setWenBalance(0);
         }
       } catch (error) {
         console.error("Error fetching balances:", error);
@@ -55,49 +66,38 @@ const AirdropSection = () => {
     getBalances();
   }, [connected, publicKey]);
 
-  const getBonkBalance = async (publicKey) => {
+  const getTokenBalance = async (publicKey, tokenPublicKey) => {
     try {
       const connection = new Connection('https://cool-clean-friday.solana-mainnet.quiknode.pro/5d4f1cb01a8c07492695c52553b7b7d525926a7f/');
-      const tokenPublicKey = new PublicKey('DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263');
       const tokenBalances = await connection.getParsedTokenAccountsByOwner(
         publicKey,
         {
-          programId: TOKEN_PROGRAM_ID,
+          programId: TOKEN_PROGRAM_ID
         }
       );
   
-      const bonkBalance = tokenBalances.value.find(
+      const tokenBalance = tokenBalances.value.find(
         (account) => account.account.data.parsed.info.mint.toString() === tokenPublicKey.toString()
       );
   
-      return bonkBalance ? bonkBalance.account.data.parsed.info.tokenAmount.amount : "0";
+      return tokenBalance ? tokenBalance.account.data.parsed.info.tokenAmount.amount : "0";
     } catch (error) {
-      console.error("Error fetching UBONK balance:", error);
+      console.error(`Error fetching balance for token ${tokenPublicKey}:`, error);
       return "0";
     }
   };
 
-  const getUbonkBalance = async (publicKey) => {
-    try {
-      const connection = new Connection('https://cool-clean-friday.solana-mainnet.quiknode.pro/5d4f1cb01a8c07492695c52553b7b7d525926a7f/');
-      const tokenPublicKey = new PublicKey('8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5');
-      const tokenBalances = await connection.getParsedTokenAccountsByOwner(
-        publicKey,
-        {
-          programId: TOKEN_PROGRAM_ID,
-        }
-      );
-  
-      const ubonkBalance = tokenBalances.value.find(
-        (account) => account.account.data.parsed.info.mint.toString() === tokenPublicKey.toString()
-      );
-      return ubonkBalance ? ubonkBalance.account.data.parsed.info.tokenAmount.amount : "0";
-    } catch (error) {
-      console.error("Error fetching UBONK balance:", error);
-      return "0";
-    }
-  };
-  
+const jupPoints = jupBalance > 100000 ? 500000 : 0;
+const wenPoints = wenBalance > 177800000 ? 500000 : 0;
+const bonkPoints = bonkBalance > 177800000 ? 500000 : 0;
+let ubonkPoints = 0;
+if (ubonkBalance >= 50000000000 && ubonkBalance <= 100000000000) {
+  ubonkPoints = 500000;
+} else if (ubonkBalance >= 100000000001) {
+  ubonkPoints = 4200201;
+} 
+
+const totalPoints = jupPoints + wenPoints + bonkPoints  + ubonkPoints;
   return (
     <section className={` flex justify-center items-center my-20 lg:py-20`}>
 
@@ -105,11 +105,11 @@ const AirdropSection = () => {
         <div className="flex justify-center items-center ">
           <div className="justify-center items-center ">
             <div className="flex justify-center items-center text-center">
-             
             </div>     
-
             <div className="rounded-3xl p-1 bg-gradient-to-r from-sky-400 via-green-400 to-yellow-200 border-white md:w-[580px]">
-              <div className="bg-gray-900 rounded-3xl py-8 px-6">
+             
+              <div className=" bg-cards rounded-3xl py-8 px-2 md:px-6">
+             
                 {connected ? (
                   <>
                     <div className="flex justify-center items-center gap-4">
@@ -118,25 +118,27 @@ const AirdropSection = () => {
                       <h4 className="text-center py-4">Congratulations, you received</h4>
                       <div className="flex justify-center items-center gap-2  ">
                         <h4 className="text-center font-extrabold text-white text-4xl md:text-4xl lg:text-6xl">
-                        {ubonkBalance > 1000 ? '500.000' : '0'}
+                       {totalPoints.toLocaleString()}
                         </h4>
                         <Image src='https://pbs.twimg.com/profile_images/1739437848531734528/--HAtlIr_400x400.jpg' alt=''  className="w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] rounded-full object-contain"/>
                       </div>
                       
-                      <div className=' justify-center items-center '>
-                        <h4 className="text-center text-sm mt-10 my-4 text-white/50">
+                      <div className=' justify-center items-center'>
+                        <h4 className="text-center font-mono text-sm mt-10 my-4 text-white/50">
                           Eligibility breakdown
                         </h4>
                         <div className="border border-gray-400/20 rounded-xl bg-gray-800">
                           <div className="flex border-b border-gray-300/20">
                             <div className="flex-1 border-r border-slate-300/20 p-4 text-center">Hold JUP</div>
-                            <div className="flex-1 p-4 text-center flex justify-center items-center"> <FaCircleXmark className='text-gray-600/75 '/></div>
+                            <div className="flex-1 p-4 text-center flex justify-center items-center"> 
+                            {jupBalance > 1 ? <FaCircleCheck className='text-emerald-500 ' />:<FaCircleXmark className='text-gray-600/75 '/>}
+                            </div>
                           </div>
 
                           <div className="flex border-b border-gray-300/20">
                             <div className="flex-1 border-r border-slate-300/20 p-4 text-center">Hold BONK</div>
                               <div className="flex-1 p-4 text-center flex justify-center items-center"> 
-                                <FaCircleXmark className='text-gray-600/75 '/>
+                              {bonkBalance > 1000 ? <FaCircleCheck className='text-emerald-500 ' />:<FaCircleXmark className='text-gray-600/75 '/>}
                               </div>
                           </div>
 
@@ -145,21 +147,23 @@ const AirdropSection = () => {
                               Hold UBONK
                             </div>
                             <div className="flex-1 p-4 text-center flex justify-center items-center">
-                              {ubonkBalance > 1000000 ? <FaCircleCheck className='text-emerald-500 ' />:<FaCircleXmark className='text-gray-600/75 '/>}
+                              {ubonkBalance > 500000 ? <FaCircleCheck className='text-emerald-500 ' />:<FaCircleXmark className='text-gray-600/75 '/>}
                             </div>
                           </div>
 
                           <div className="flex border-b border-slate-300/20">
                             <div className="flex-1 border-r border-gray-300/20 p-4 text-center">Hold WEN</div>
-                            <div className="flex-1 p-4 text-center flex justify-center items-center"> <FaCircleXmark className='text-gray-600/75 '/></div>
+                            <div className="flex-1 p-4 text-center flex justify-center items-center"> 
+                            {wenBalance > 1000 ? <FaCircleCheck className='text-emerald-500 ' />:<FaCircleXmark className='text-gray-600/75 '/>}
+                            </div>
                           </div>
                          
                           <div className="flex border-b border-slate-300/20">
-                            <div className="flex-1 border-r border-gray-300/20 p-4 text-center">Hold NFT</div>
+                            <div className="flex-1 border-r border-gray-300/20 p-4 text-center">Discord OG</div>
                             <div className="flex-1 p-4 text-center flex justify-center items-center"> <FaCircleXmark className='text-gray-600/75 '/></div>
                           </div>
                           <div className="flex border-b border-slate-300/20">
-                            <div className="flex-1 border-r border-gray-300/20 p-4 text-center">Airdrop Whitelist</div>
+                            <div className="flex-1 border-r border-gray-300/20 p-4 text-center">Airdrop whitelist</div>
                             <div className="flex-1 p-4 text-center flex justify-center items-center"> <FaCircleXmark className='text-gray-600/75 '/></div>
                           </div>
                           <div className="flex">
@@ -170,10 +174,10 @@ const AirdropSection = () => {
                       </div>
                       <div className=" mt-6">
                       <h4 className="text-center font-mono font-bold text-xs md:text-sm">
-                         You can check your qualify criteria above.
+                        
                         </h4> 
-                        <h4 className="text-center font-mono text-xs lg:text-sm my-2">
-                          Once you qualify, you can claim your airdrop rewards when the claim period has started on 03/20/2024. Find the criteria details here
+                        <h4 className="text-center font-mono text-xs my-2 lg:px-10">
+                        Your qualification criteria will appear above. Once you qualify, you can claim your airdrop prize when the claim period has started.
                         </h4> 
                       </div>  
                       <Divider className="bg-white/10 my-4" />
@@ -184,7 +188,7 @@ const AirdropSection = () => {
                   </>
                 ) : (
                   <>
-                    <div className="px-8 py-10 justify-center items-center">
+                    <div className="px-8 py-10  justify-center items-center">
                       <div className="text-center justify-center items-center text-sm">
                         <h4 className="text-4xl text-white font-extrabold">$UBONK AIRDROP</h4>
                       </div>

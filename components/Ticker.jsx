@@ -34,16 +34,16 @@ const Ticker = ({ endTime }) => {
     <div className="text-center">
       <h4 className="text-white font-bold">Presale starts in</h4>
       <div className="flex gap-4 mt-4">
-        <div className="bg-orange-500 p-2 rounded-md w-[40px]">
+        <div className="bg-[#d17f2c] p-2 rounded-md w-[40px]">
           <h4 className="font-bold text-orange-100">{formatTimeUnit(timeLeft.days)}</h4>
         </div>
-        <div className="bg-orange-500 p-2 rounded-md w-[40px]">
+        <div className="bg-[#d17f2c] p-2 rounded-md w-[40px]">
           <h4 className="font-bold text-white">{formatTimeUnit(timeLeft.hours)}</h4>
         </div>
-        <div className="bg-orange-500 p-2 rounded-md w-[40px]">
+        <div className="bg-[#d17f2c] p-2 rounded-md w-[40px]">
           <h4 className="font-bold text-white">{formatTimeUnit(timeLeft.minutes)}</h4>
         </div>
-        <div className="bg-orange-500 p-2 rounded-md w-[40px]">
+        <div className="bg-[#d17f2c] p-2 rounded-md w-[40px]">
           <h4 className="font-bold text-white">{formatTimeUnit(timeLeft.seconds)}</h4>
         </div>
       </div>

@@ -4,6 +4,7 @@ import styles from '../styles';
 import { Button, Link} from '@nextui-org/react';
 import { fadeIn, slideIn } from '../utils/motion';
 import { FaArrowRight, FaArrowDown  } from 'react-icons/fa';
+import { PiDogFill } from "react-icons/pi";
 
 const icons = {
   down: <FaArrowDown size={14}  />,
@@ -42,18 +43,21 @@ function Hero() {
           </motion.span>
           <div className=' justify-center gap-4 my-20 flex md:hidden'>
             <Link href='/ubonk' target='_blank'>
-              <Button radius='md' size='md' className='bg-orange-500 hover:bg-orange-300 text-orange-800/75 hover:text-orange-100 font-semibold' endContent={icons.arrow}>Get UBONK</Button>
+              <Button radius='md' size='md' className='bg-orange-500 hover:bg-orange-400 text-orange-800/75 hover:text-orange-100 font-semibold' endContent={icons.arrow}>Get UBONK</Button>
             </Link>
-            <Link href='https://docs.unibonk.meme/ubonk-coin/tokenomics' target='_blank'>
+            <Link href='hts://docs.unibonk.meme/ubonk-coin/tokenomics' target='_blank'>
               <Button variant='ghost' size='md' radius='md' color='bg-orange-500'  className='bg-transparent hover:bg-orange-500 border-orange-500 text-orange-100 hover:text-orange-100 font-semibold' endContent={icons.arrow}>Tokenomics</Button>
             </Link>
           </div>
           <div className=' justify-center gap-4 my-20 hidden md:flex'>
             <Link href='/ubonk' target='_blank'>
-            <Button radius='md' size='lg' className='bg-orange-500 hover:bg-orange-400 text-orange-800/75 hover:text-orange-100 font-semibold' endContent={icons.arrow}>Get UBONK</Button>
+            <Button radius='md' size='lg' 
+            className='bg-orange-500 hover:text-orange-100 hover:bg-orange-400 text-orange-800/75
+            font-semibold' endContent={<PiDogFill size={24}/>}>GET UBONK</Button>
             </Link>
             <Link href='https://docs.unibonk.meme/ubonk-coin/tokenomics' target='_blank'>
-            <Button variant='ghost' radius='md' color='bg-orange-500' size='lg' className='bg-transparent hover:bg-orange-500 border-orange-500 text-orange-100 hover:text-orange-100 font-semibold' endContent={icons.arrow}>Tokenomics</Button>
+            <Button variant='ghost' radius='md' color='bg-orange-500' size='lg' 
+            className='bg-transparent hover:bg-orange-500 border-orange-500 text-orange-300 hover:text-orange-100 font-semibold' endContent={icons.arrow}>Tokenomics</Button>
             </Link>
 
           </div>

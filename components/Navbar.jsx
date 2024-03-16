@@ -1,17 +1,16 @@
 'use client';
 import React, { useState } from "react";
 import {
-  Button, Popover, PopoverTrigger, PopoverContent, Image
+  Button, Image
 } from "@nextui-org/react";
 import { ChevronDown } from "./Icon.jsx";
 import Link from "next/link";
 import { useRouter } from 'next/router';
 import { BsDiscord, BsTwitterX , } from "react-icons/bs";
 import { BiLogoTelegram } from "react-icons/bi";
-import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
-import { TbMenuOrder } from "react-icons/tb";
 import { CiMenuKebab } from "react-icons/ci";
-import { FaArrowRight  } from 'react-icons/fa';
+import { FaShieldDog } from "react-icons/fa6";
+import { PiDogFill } from "react-icons/pi";
 
 
 export default function Navbar() {
@@ -44,7 +43,7 @@ export default function Navbar() {
             <Button  className="text-white/50 hover:text-white bg-transparent hover:bg-orange-400/70 text-[18px]">UBONK</Button>
           </Link>
           <li className="">
-          <Link href="/ubonk" target='_blank'>
+          <Link href="/ubonk">
             <Button  className="text-white/50 hover:text-white bg-transparent hover:bg-orange-400/70 text-[18px]">Presale</Button>
             </Link>
           </li>
@@ -61,7 +60,7 @@ export default function Navbar() {
           </ul>
         <div className="flex justify-start items-center gap-4">
           <div className="hidden md:flex gap-1 items-center text-white text-lg">
-            <Link href='https://discord.com/unibonk' target='_blank'>
+            <Link href='https://discord.gg/rgTsdr5mV4' target='_blank'>
               <Button variant="light" className="text-white/50 hover:text-white" isIconOnly startContent={<BsDiscord size={20} />}/>
             </Link>
             <Link href='https://twitter.com/unibonk' target='_blank'>
@@ -73,7 +72,8 @@ export default function Navbar() {
           </div>  
            <div className="flex  items-center gap-1 z-10">
            <Link href='/ubonk'>
-           <Button size="lg"  radius="md"  className="bg-orange-500 hover:bg-orange-400 text-orange-800/75 hover:text-orange-100 font-semibold"> BUY UBONK</Button>
+           <Button size="md"  radius="md"  color="bg-orange-500" 
+           className='bg-orange-500 hover:bg-orange-400 border-orange-500 text-orange-800/75 hover:text-orange-100 font-semibold' endContent={<PiDogFill size={20} />}> BUY UBONK</Button>
           </Link>
            <CiMenuKebab className='flex text-orange-400 lg:hidden ' size={20} />
            </div>

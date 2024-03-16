@@ -22,7 +22,9 @@ import {
   LAMPORTS_PER_SOL,
 } from "@solana/web3.js";
 import dynamic from "next/dynamic";
-import { FaTwitter, FaDiscord, FaGithub } from "react-icons/fa";
+import { FaTwitter, FaDiscord } from "react-icons/fa";
+import { BiLogoTelegram } from "react-icons/bi";
+
 import { BsDot } from "react-icons/bs";
 import {  ScanIcon, Spinner} from '../components/Icon';
 import { Token, TOKEN_PROGRAM_ID } from "@solana/spl-token";
@@ -139,7 +141,7 @@ const Buy = () => {
       stroke: {
         colors: 'transparent'
       },
-      colors: ['#fa8b69','#f78d36','#ffd3a1', '#f0b5a3', '#fce3c0'], 
+      colors: ['#f0ad48','#f78d36','#f5b164', '#a17b54', '#fce3c0'], 
       labels: ['Liquidity', 'Presale', 'Early Contributor ', 'Staking Reward', 'Airdrop'],
       legend: {
         position: 'right',
@@ -205,9 +207,24 @@ const Buy = () => {
                 <div className="grid ">
                   <h4 className="text-xl md:text-2xl font-bold text-white">UBONK Presale</h4>
                   <div className="flex gap-4 mt-2">
-                      <FaTwitter />
-                      <FaDiscord />
-                      <FaGithub />
+                  
+                    <Link href='https://discord.gg/aEMpvXSSFb' target='_blank'>
+                      <FaDiscord className="text-white/50 hover:text-white"/>
+                    </Link>
+                    <Link href='https://twitter.com/unibonk' target='_blank'>
+                      <FaTwitter className="text-white/50 hover:text-white"/>
+                    </Link>
+                    <Link href='https://t.me/unibonk' target='_blank'>
+                      <BiLogoTelegram className="text-white/50 hover:text-white"/>
+                    </Link>
+                    <div className="flex gap-2">
+                    <Link href='https://solscan.io/token/8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5' target='_blank'>
+                      <Image src='https://public-api.solscan.io/logo.png' alt='' className="w-[18px] h-[18px] rounded-full"/>
+                    </Link>
+                    <Link href='https://birdeye.so/token/8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5?chain=solana' target='_blank'>
+                      <Image src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAjVBMVEVHcEz/ZRb/Zxb/eBL/dRP/vwP/ig7/tgX/jg3/jgz/zgD/eBL/gRD/wQT/rQf/tAb/ZBf/Yxf/Yhf/zgD/vAT/ygH/mAz/qAj/////bhT/mQb/dhH/aBX/sAP/kgX//Pf/dwD/hQb/nwL/qQL/uwT/yZ3/tVL/59f/oS3/uXj/ygD/iDD/olX/9Or/26t9B5teAAAAGHRSTlMAdQ2cPvBMQUD8SOvIBIDegqYpiTHSbNrH1elhAAAAvUlEQVQ4jd2PVxaCMBAA6U3BrktCKh3E+x/PgO/5Q8IBmN+Z3U0sa8c4tn3d8l5eFMXF7IM8n4uzcR5jvCQGH/HxV7iO3osRWo7xwTQvxBug59gz+DgWvFYrDAsiSmNRT8D4Ue8RolRdMAWhlKroVNAKV+ubDqmiAahFoPFlA6yXsmfAaKzxhDQMFlhHo7WvCCHlRyVTjdBT4yv/pAqFlHL9gLDy75aVZnPzyjT3B1/37T/J8Nj06S3Z9DvgC7vEE0aY2FgUAAAAAElFTkSuQmCC' alt='' className="w-[18px] h-[18px] rounded-full"/>
+                    </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -284,19 +301,18 @@ const Buy = () => {
                   <h4 className="text-sm">Start time</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm ">2024.03.14 13:00 {'(UTC)'} </h4>
+                  <h4 className="text-sm ">2024.03.16 18:00 {'(UTC)'} </h4>
               </div>
 
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">End time</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm ">2024.03.17 13:00 {'(UTC)'}</h4>
+                  <h4 className="text-sm ">2024.03.20 18:00 {'(UTC)'}</h4>
               </div>
               
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">Contract Address</h4>
-                  
                   <Link href='https://solscan.io/token/8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5' target='_blank'>
                     <h4 className="text-sm hidden md:flex  items-center text-orange-200 hover:text-orange-300">8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5 <CgArrowTopRight   size={20}/></h4>
                   <h4 className="text-sm md:hidden flex  items-center text-orange-200 hover:text-orange-300">8QcA6zp6Q..tUmKKTMjq5 <CgArrowTopRight   size={20}/></h4>
@@ -309,7 +325,7 @@ const Buy = () => {
       <div className="grid gap-4">
       <Card className="bg-gray-800 lg:w-[400px] border-gray-800">
           <CardHeader className="flex justify-center items-center">
-          <DynamicTicker endTime="2024-03-14T13:00:00Z" />
+          <DynamicTicker endTime="2024-03-17T14:00:00Z" />
           </CardHeader>
           <div className="mx-5">
           <Progress
@@ -384,11 +400,9 @@ const Buy = () => {
               <>
               <Button
                 onClick={sendSol}
-                size='md'
-
+                size='lg'
                 className="px-4  mx-4 py-4 my-4 mb-4 bg-[#d17f2c] hover:bg-orange-400 text-orange-800/75 hover:text-orange-100 font-semibold"
-                
-                isDisabled={!!txSig || parseFloat(solAmount) < 0.000001 || solAmount.trim() === ''} 
+                isDisabled={!!txSig || parseFloat(solAmount) < 0.1 || solAmount.trim() === ''} 
                 >
                 {txSig ? 'Loading' : 'Buy with SOL'}
                 {txSig && icons.spinner}
@@ -397,7 +411,7 @@ const Buy = () => {
             ):(
               <>
                <CardFooter className="w-full justify-start items-center mb-4">
-                <WalletMultiButton style={{background:'#f97316',  borderRadius:'10px'}}> Connect  Wallet</WalletMultiButton>
+                <WalletMultiButton style={{background:'#d17f2c',  borderRadius:'10px'}}> Connect  Wallet</WalletMultiButton>
                 </CardFooter>
               </>
             )}

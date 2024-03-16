@@ -3,7 +3,7 @@ import styles from '../styles';
 import { motion } from 'framer-motion';
 import { HomeIcon } from '../components/Icon';
 import { fadeIn } from '../utils/motion';
-import { Button, Divider, Card, CardBody, CardHeader, Image, CardFooter } from '@nextui-org/react';
+import { Button, Link, Card, CardBody, CardHeader, Image, CardFooter } from '@nextui-org/react';
 import { FaArrowRight } from 'react-icons/fa';
 
 const icons = {
@@ -48,7 +48,7 @@ const ActiveSlider = () => {
         {ServiceData.map((item) => (
           <SwiperSlide key={item.title}>
             <div className='px-1 block lg:hidden'>
-            <Card className="h-[200px] md:h-[300px] border-orange-500 border-2 rounded-3xl lg:rounded-3xl ">
+            <Card className="h-[200px] md:h-[300px] border-orange-500 border-2 rounded-2xl lg:rounded-3xl ">
             <CardHeader className="absolute z-10 top-1 flex-col !items-start">
               <p className="text-tiny text-white/60 uppercase font-bold">{item.title}</p>
               <h4 className="text-white font-medium text-large">{item.content}</h4>
@@ -63,12 +63,15 @@ const ActiveSlider = () => {
             />
              <CardBody>
             </CardBody>
+            <Link href={item.to} target='_blank'>
+
                 <CardFooter className=''>
             <Button variant='flat' radius='sm' size='sm' className='bg-orange-500 hover:bg-orange-400 text-orange-800/75 hover:text-orange-100 font-semibold' endContent={<FaArrowRight />}>
                   More Details 
                   </Button>
+            
             </CardFooter>
-           
+            </Link>
           </Card>
           </div>
           </SwiperSlide>

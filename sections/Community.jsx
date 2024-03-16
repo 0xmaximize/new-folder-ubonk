@@ -2,28 +2,28 @@
 import styles from "../styles";
 import { BsDiscord, BsTwitter } from 'react-icons/bs'
 import { MdOutlineArrowOutward } from 'react-icons/md';
-
+import { Link } from '@nextui-org/react'
 import { FaTelegramPlane, FaMedium } from 'react-icons/fa';
 
 const communityLinks = [
     {
-      title: "Telegram Channel",
-      description:"Ask general question and chat with the worldwide community on Telegram.",
-      to:"/",
+      title: "Telegram",
+      description:" Join us on Telegram today and be at the forefront of all things UNIBONK!",
+      to:"https://t.me/unibonk",
       icon:"telegram"
       
     },
     {
         title: "Twitter",
-        description:"Follow us @unibonk on twitter to get the latest news & update.",
-        to:"/",
+        description:"Follow us to engage with fellow UNIBONK! and be part of the conversation.",
+        to:"https://twitter.com/unibonk",
         icon:"twitter"
         
       },
       {
-        title: "Discord Server",
-        description:"Get in touch with us on Discord server's & become the UNIBONK! Community.",
-        to:"/",
+        title: "Discord",
+        description:" Gain access to exclusive channels, voice chats, and a supportive community ready to welcome you with open arms.",
+        to:"https://discord.gg/rgTsdr5mV4",
         icon:"discord"
         
       },
@@ -31,9 +31,9 @@ const communityLinks = [
   ]
 
 const icons = {
-    discord: <BsDiscord className='text-white text-[32px] lg:text-[30px]' />,
-    twitter: <BsTwitter className='text-white text-[32px] lg:text-[30px]'/>,
-    telegram: <FaTelegramPlane className='text-white text-[32px] lg:text-[30px]' />,
+    discord: <BsDiscord className='text-white text-[32px] lg:text-[40px]' />,
+    twitter: <BsTwitter className='text-white text-[32px] lg:text-[40px]'/>,
+    telegram: <FaTelegramPlane className='text-white text-[32px] lg:text-[40px]' />,
     arrow : <MdOutlineArrowOutward className='text-white' size={18}/>,
 }
 
@@ -47,7 +47,7 @@ const Community = () => {
                   UNIBONK COMMUNITY
               </span>
               <h1 className="font-black text-3xl lg:text-5xl text-white mt-2 md:mt-4 md:max-w-[350px] lg:max-w-[600px]">
-                Meet our community across the world and the universe.</h1>
+                Meet our community across the world.</h1>
               <p className={`text-white/50 flex my-4 md:max-w-[560px]`}>
               Join the fast-growing UNIBONK community and connect with innovators around the world to build the best era of memes in the future.
               </p>         
@@ -56,17 +56,21 @@ const Community = () => {
             <div className="grid justify-center items-center">
             {communityLinks.map((data, index) => (       
              <div key={index} className="flex justify-start items-start gap-6 py-6 lg:py-8">
-                <span className="items-center ">                
+             
+                <span className="items-center mt-4">                
                     {icons[data.icon]}
                 </span>
+                <Link href={data.to} target="_blank"> 
                 <div className="justify-center items-center grid gap-2 max-w-[340px]">
                     <div className="flex gap-1">  
                     <h4 className="flex items-center gap-1 text-xl text-white font-bold"> {data.title}</h4>
-                    <span className="mt-[-6px]"> {icons.arrow}</span>
+                    <span className=""> {icons.arrow}</span>
                     </div>
                     <span className={`text-white/50 font-normal`}>{data.description}</span>
                 </div>
+                </Link>
              </div>
+
             ))}
           </div>
         </div>   

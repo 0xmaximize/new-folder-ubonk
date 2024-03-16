@@ -4,7 +4,7 @@ import styles from "../styles";
 import { FaDiscord, FaTwitter, FaGithub } from "react-icons/fa";
 import { BiLogoDiscord } from "react-icons/bi"
 import { SiGitbook } from 'react-icons/si';
-import { Divider } from "@nextui-org/react";
+import { Divider, Link } from "@nextui-org/react";
 import { exploreLinks, usageLinks, learnLinks, communityLinks } from "../constants";
 
 function Footer() {
@@ -28,22 +28,41 @@ function Footer() {
 					<li key='Trade' className='my-2 text-gray-500 hover:text-white'>{data.title}</li>
 				))}
 			</ul>
-			<ul>
-				<span aria-label="Trade" className='font-bold text-white text-xl  mb-2'>Help</span>
-				{exploreLinks.map((data) => (
-					<li key='Trade' className='my-2 text-gray-500 hover:text-white'>{data.title}</li>
+			<ul className="lg:block hidden">
+				<span aria-label="Trade" className='font-bold text-white text-xl mb-2'>Explore</span>
+				{usageLinks.map((data, index) => (
+					<li className='my-2 text-gray-500 hover:text-white' key={index}>
+					<Link href={data.to} target='_blank'>
+						<span className="text-gray-500 hover:text-white">
+						{data.title}
+						</span>
+					</Link>
+					</li>
 				))}
 			</ul>
-			<ul className="lg:block hidden">
-				<span aria-label="Trade" className='font-bold text-white text-xl mb-2'>Legal</span>
-				{usageLinks.map((data) => (
-					<li key='Trade' className='my-2 text-gray-500 hover:text-white'>{data.title}</li>
-				))}   
+			<ul>
+				<span aria-label="Trade" className='font-bold text-white text-xl  mb-2'>Help</span>
+				{exploreLinks.map((data, index) => (
+					<li className='my-2 text-gray-500 hover:text-white' key={index}>
+					<Link href={data.to} target='_blank'>
+						<span className="text-gray-500 hover:text-white">
+						{data.title}
+						</span>
+					</Link>
+					</li>
+				))}
 			</ul>
+		
 			<ul>
 				<span aria-label="Trade" className='font-bold text-white text-xl  mb-2'>Follow us</span>
-				{communityLinks.map((data) => (
-					<li key='Trade' className='my-2 text-gray-500 hover:text-white'>{data.title}</li>
+				{communityLinks.map((data, index) => (
+					<li className='my-2 text-gray-500 hover:text-white' key={index}>
+					<Link href={data.to} target='_blank'>
+						<span className="text-gray-500 hover:text-white">
+						{data.title}
+						</span>
+					</Link>
+					</li>
 				))}
 			</ul>
 		</div>
