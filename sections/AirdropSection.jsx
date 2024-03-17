@@ -158,10 +158,7 @@ const totalPoints = jupPoints + wenPoints + bonkPoints  + ubonkPoints;
                             </div>
                           </div>
                          
-                          <div className="flex border-b border-slate-300/20">
-                            <div className="flex-1 border-r border-gray-300/20 p-4 text-center">Discord OG</div>
-                            <div className="flex-1 p-4 text-center flex justify-center items-center"> <FaCircleXmark className='text-gray-600/75 '/></div>
-                          </div>
+                       
                           <div className="flex border-b border-slate-300/20">
                             <div className="flex-1 border-r border-gray-300/20 p-4 text-center">Airdrop whitelist</div>
                             <div className="flex-1 p-4 text-center flex justify-center items-center"> <FaCircleXmark className='text-gray-600/75 '/></div>
@@ -174,10 +171,9 @@ const totalPoints = jupPoints + wenPoints + bonkPoints  + ubonkPoints;
                       </div>
                       <div className=" mt-6">
                       <h4 className="text-center font-mono font-bold text-xs md:text-sm">
-                        
                         </h4> 
                         <h4 className="text-center font-mono text-xs my-2 lg:px-10">
-                        Your qualification criteria will appear above. Once you qualify, you can claim your airdrop prize when the claim period has started.
+                        Your qualification criteria will appear above. Once you qualify, you can claim your $UBONK airdrop when the claim period has started.
                         </h4> 
                       </div>  
                       <Divider className="bg-white/10 my-4" />

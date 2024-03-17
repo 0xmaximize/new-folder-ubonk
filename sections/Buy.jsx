@@ -45,7 +45,7 @@ const Buy = () => {
   const [txSig, setTxSig] = useState('');
   const [solAmount, setSolAmount] = useState('');
   const { publicKey, disconnect, wallet, balance, connected, sendTransaction } = useWallet();
-  const receiver = 'DivM41RC9PFZLqZW2aNpGJb2X8z7xG9DQY758tKZP8EP';
+  const receiver = '8PVwDbMzKiuEXV5WN7Cfd249xAJjokv7VVpmePPMkikh';
   const { connection } = useConnection();
   const [solBalance, setSolBalance] = useState(null);
   const [txStatus, setTxStatus] = useState(''); 
@@ -298,7 +298,7 @@ const Buy = () => {
                   <h4 className="text-sm "> 1 SOL = 5.155.729 UBONK</h4>
               </div>
               <div className="flex justify-between text-white">
-                  <h4 className="text-sm">Minimum buy</h4>
+                  <h4 className="text-sm">Min purchase</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
                   <h4 className="text-sm">0.1 SOL</h4>
               </div>
@@ -306,14 +306,14 @@ const Buy = () => {
                   <h4 className="text-sm">Start time</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm ">2024.03.17 16:00 {'(UTC)'} </h4>
+                  <h4 className="text-sm ">2024.03.17 16:59 {'(UTC)'} </h4>
               </div>
 
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">End time</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm ">2024.03.20 16:00 {'(UTC)'}</h4>
+                  <h4 className="text-sm ">2024.03.20 16:59 {'(UTC)'}</h4>
               </div>
               
               <div className="flex justify-between text-white">
@@ -330,7 +330,7 @@ const Buy = () => {
       <div className="grid gap-4">
       <Card className="bg-gray-800 lg:w-[400px] border-gray-800">
           <CardHeader className="flex justify-center items-center">
-          <DynamicTicker endTime="2024-03-17T16:00:00Z" />
+          <DynamicTicker endTime="2024-03-17T16:59:00Z" />
           </CardHeader>
           <div className="mx-5">
           <Progress
@@ -407,7 +407,8 @@ const Buy = () => {
                 onClick={sendSol}
                 size='lg'
                 className="px-4  mx-4 py-4 my-4 mb-4 bg-[#d17f2c] hover:bg-orange-400 text-orange-800/75 hover:text-orange-100 font-semibold"
-                isDisabled={!!txSig || parseFloat(solAmount) < 0.1 || solAmount.trim() === ''} 
+                isDisabled
+                /* isDisabled={!!txSig || parseFloat(solAmount) < 0.1 || solAmount.trim() === ''} */
                 >
                 {txSig ? 'Loading' : 'Buy with SOL'}
                 {txSig && icons.spinner}
