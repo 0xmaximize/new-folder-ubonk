@@ -306,14 +306,14 @@ const Buy = () => {
                   <h4 className="text-sm">Start time</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm ">2024.03.17 16:59 {'(UTC)'} </h4>
+                  <h4 className="text-sm ">03.18.2024 13:00 {'(UTC)'} </h4>
               </div>
 
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">End time</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm ">2024.03.20 16:59 {'(UTC)'}</h4>
+                  <h4 className="text-sm ">03.21.2024 13:00 {'(UTC)'}</h4>
               </div>
               
               <div className="flex justify-between text-white">
@@ -330,7 +330,7 @@ const Buy = () => {
       <div className="grid gap-4">
       <Card className="bg-gray-800 lg:w-[400px] border-gray-800">
           <CardHeader className="flex justify-center items-center">
-          <DynamicTicker endTime="2024-03-17T16:59:00Z" />
+          <DynamicTicker endTime="2024-03-18T13:00:00Z" />
           </CardHeader>
           <div className="mx-5">
           <Progress
@@ -436,7 +436,7 @@ const Buy = () => {
         />
      
      </div>
-      
+
       </Card>
       </div>
       </div>
