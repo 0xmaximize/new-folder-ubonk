@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from "react";
 import {
-  Button, Image
+  Button, Image, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem,
 } from "@nextui-org/react";
 import { ChevronDown } from "./Icon.jsx";
 import Link from "next/link";
@@ -11,6 +11,7 @@ import { BiLogoTelegram } from "react-icons/bi";
 import { CiMenuKebab } from "react-icons/ci";
 import { FaShieldDog } from "react-icons/fa6";
 import { PiDogFill } from "react-icons/pi";
+import { LuDog } from "react-icons/lu";
 
 
 export default function Navbar() {
@@ -55,7 +56,10 @@ export default function Navbar() {
             </li>
             
             <li className="">
+            <Link href='https://docs.unibonk.meme' target="_blank">
+
               <Button className="text-white/50 hover:text-white bg-transparent hover:bg-orange-400/70 text-[18px]">Docs</Button>
+            </Link>          
             </li>
           </ul>
         <div className="flex justify-start items-center gap-4">
@@ -72,9 +76,12 @@ export default function Navbar() {
           </div>  
            <div className="flex  items-center gap-1 z-10">
            <Link href='/ubonk'>
-           <Button size="md"  radius="md"  color="bg-orange-500" 
-           className='bg-orange-500 hover:bg-orange-400 border-orange-500 text-orange-800/75 hover:text-orange-100 font-semibold' endContent={<PiDogFill size={20} />}> BUY UBONK</Button>
+           <Button size="md" variant='ghost' radius="md"  color="bg-orange-500" 
+           className='bg-transparent hover:bg-orange-500 border-orange-500 text-orange-100 hover:text-orange-100 font-semibold' endContent={<LuDog size={20} />}> GET UBONK</Button>
           </Link>
+          <div className="flex lg:hidden">
+    
+          </div>
            <CiMenuKebab className='flex text-orange-400 lg:hidden ' size={20} />
            </div>
         </div>
