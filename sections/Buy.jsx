@@ -22,14 +22,16 @@ import {
   LAMPORTS_PER_SOL,
 } from "@solana/web3.js";
 import dynamic from "next/dynamic";
-import { FaTwitter, FaDiscord } from "react-icons/fa";
-import { BiLogoTelegram } from "react-icons/bi";
+import { BiLogoTelegram, BiLogoDiscordAlt } from "react-icons/bi";
 
 import { BsDot } from "react-icons/bs";
 import {  ScanIcon, Spinner} from '../components/Icon';
 import { Token, TOKEN_PROGRAM_ID } from "@solana/spl-token";
 import { CgArrowTopRight  } from "react-icons/cg";
-import { Ticker } from "../components";
+import { FaXTwitter } from "react-icons/fa6";
+import { RiDiscordLine, RiTwitterLine } from "react-icons/ri";
+import { LiaTelegramPlane } from "react-icons/lia";
+
 
 const DynamicChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 const DynamicTicker = dynamic(() => import('../components/Ticker'), { ssr: false });
@@ -207,19 +209,18 @@ const Buy = () => {
                 <div className="grid ">
                   <h4 className="text-xl md:text-2xl font-bold text-white">UBONK Presale</h4>
                   <div className="flex gap-4 mt-2">
-                  
-                    <Link href='https://discord.gg/aEMpvXSSFb' target='_blank'>
-                      <FaDiscord className="text-white/50 hover:text-white"/>
+                  <Link href='https://twitter.com/unibonk' target='_blank'>
+                      <RiTwitterLine className="text-white/50 hover:text-white text-md"/>
                     </Link>
-                    <Link href='https://twitter.com/unibonk' target='_blank'>
-                      <FaTwitter className="text-white/50 hover:text-white"/>
+                    <Link href='https://discord.gg/aEMpvXSSFb' target='_blank'>
+                      <RiDiscordLine className="text-white/50 hover:text-white text-lg"/>
                     </Link>
                     <Link href='https://t.me/unibonk' target='_blank'>
-                      <BiLogoTelegram className="text-white/50 hover:text-white"/>
+                      <LiaTelegramPlane  className="text-white/50 hover:text-white text-md"/>
                     </Link>
-                    <div className="flex gap-2">
+                    <div className="hidden md:flex gap-3">
                     <Link href='https://solscan.io/token/8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5' target='_blank'>
-                      <Image src='https://public-api.solscan.io/logo.png' alt='' className="w-[18px] h-[18px] rounded-full"/>
+                      <Image src='https://public-api.solscan.io/logo.png' alt='' className="w-[17px] h-[17px] rounded-full"/>
                     </Link>
                     <Link href='https://birdeye.so/token/8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5?chain=solana' target='_blank'>
                       <Image src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAjVBMVEVHcEz/ZRb/Zxb/eBL/dRP/vwP/ig7/tgX/jg3/jgz/zgD/eBL/gRD/wQT/rQf/tAb/ZBf/Yxf/Yhf/zgD/vAT/ygH/mAz/qAj/////bhT/mQb/dhH/aBX/sAP/kgX//Pf/dwD/hQb/nwL/qQL/uwT/yZ3/tVL/59f/oS3/uXj/ygD/iDD/olX/9Or/26t9B5teAAAAGHRSTlMAdQ2cPvBMQUD8SOvIBIDegqYpiTHSbNrH1elhAAAAvUlEQVQ4jd2PVxaCMBAA6U3BrktCKh3E+x/PgO/5Q8IBmN+Z3U0sa8c4tn3d8l5eFMXF7IM8n4uzcR5jvCQGH/HxV7iO3osRWo7xwTQvxBug59gz+DgWvFYrDAsiSmNRT8D4Ue8RolRdMAWhlKroVNAKV+ubDqmiAahFoPFlA6yXsmfAaKzxhDQMFlhHo7WvCCHlRyVTjdBT4yv/pAqFlHL9gLDy75aVZnPzyjT3B1/37T/J8Nj06S3Z9DvgC7vEE0aY2FgUAAAAAElFTkSuQmCC' alt='' className="w-[18px] h-[18px] rounded-full"/>
@@ -296,19 +297,23 @@ const Buy = () => {
 
                   <h4 className="text-sm "> 1 SOL = 5.155.729 UBONK</h4>
               </div>
-           
+              <div className="flex justify-between text-white">
+                  <h4 className="text-sm">Minimum buy</h4>
+                  <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
+                  <h4 className="text-sm">0.1 SOL</h4>
+              </div>
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">Start time</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm ">2024.03.16 18:00 {'(UTC)'} </h4>
+                  <h4 className="text-sm ">2024.03.17 14:00 {'(UTC)'} </h4>
               </div>
 
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">End time</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm ">2024.03.20 18:00 {'(UTC)'}</h4>
+                  <h4 className="text-sm ">2024.03.20 14:00 {'(UTC)'}</h4>
               </div>
               
               <div className="flex justify-between text-white">

@@ -5,7 +5,7 @@ import { Button, Link} from '@nextui-org/react';
 import { fadeIn, slideIn } from '../utils/motion';
 import { FaArrowRight, FaArrowDown  } from 'react-icons/fa';
 import { PiDogFill } from "react-icons/pi";
-
+import { LuDog } from 'react-icons/lu';
 const icons = {
   down: <FaArrowDown size={14}  />,
   arrow: <FaArrowRight  size={16} />,
@@ -53,11 +53,11 @@ function Hero() {
             <Link href='/ubonk' target='_blank'>
             <Button radius='md' size='lg' 
             className='bg-orange-500 hover:text-orange-100 hover:bg-orange-400 text-orange-800/75
-            font-semibold' endContent={<PiDogFill size={24}/>}>GET UBONK</Button>
+            font-semibold' endContent={<LuDog size={24}/>}>GET UBONK</Button>
             </Link>
             <Link href='https://docs.unibonk.meme/ubonk-coin/tokenomics' target='_blank'>
             <Button variant='ghost' radius='md' color='bg-orange-500' size='lg' 
-            className='bg-transparent hover:bg-orange-500 border-orange-500 text-orange-300 hover:text-orange-100 font-semibold' endContent={icons.arrow}>Tokenomics</Button>
+            className='bg-transparent hover:bg-orange-500 border-orange-500 text-orange-100 hover:text-orange-100 font-semibold' endContent={icons.arrow}>Tokenomics</Button>
             </Link>
 
           </div>
