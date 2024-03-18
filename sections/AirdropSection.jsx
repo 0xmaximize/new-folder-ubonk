@@ -88,8 +88,8 @@ const AirdropSection = () => {
   };
 
 const jupPoints = jupBalance > 1 ? 500000 : 0;
-const wenPoints = wenBalance > 1000 ? 500000 : 0;
-const bonkPoints = bonkBalance > 1000 ? 500000 : 0;
+const wenPoints = wenBalance > 1 ? 500000 : 0;
+const bonkPoints = bonkBalance > 1 ? 500000 : 0;
 let ubonkPoints = 0;
 if (ubonkBalance >= 50000000000 && ubonkBalance <= 100000000000) {
   ubonkPoints = 500000;
@@ -138,7 +138,7 @@ const totalPoints = jupPoints + wenPoints + bonkPoints  + ubonkPoints;
                           <div className="flex border-b border-gray-300/20">
                             <div className="flex-1 border-r border-slate-300/20 p-4 text-center">Hold BONK</div>
                               <div className="flex-1 p-4 text-center flex justify-center items-center"> 
-                              {bonkBalance > 1000 ? <FaCircleCheck className='text-emerald-500 ' />:<FaCircleXmark className='text-gray-600/75 '/>}
+                              {bonkBalance > 1 ? <FaCircleCheck className='text-emerald-500 ' />:<FaCircleXmark className='text-gray-600/75 '/>}
                               </div>
                           </div>
 
@@ -154,7 +154,7 @@ const totalPoints = jupPoints + wenPoints + bonkPoints  + ubonkPoints;
                           <div className="flex border-b border-slate-300/20">
                             <div className="flex-1 border-r border-gray-300/20 p-4 text-center">Hold WEN</div>
                             <div className="flex-1 p-4 text-center flex justify-center items-center"> 
-                            {wenBalance > 1000 ? <FaCircleCheck className='text-emerald-500 ' />:<FaCircleXmark className='text-gray-600/75 '/>}
+                            {wenBalance > 1 ? <FaCircleCheck className='text-emerald-500 ' />:<FaCircleXmark className='text-gray-600/75 '/>}
                             </div>
                           </div>
                          

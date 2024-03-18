@@ -207,7 +207,7 @@ const Buy = () => {
                   classNames="m-5"
                 />          
                 <div className="grid ">
-                  <h4 className="text-xl md:text-2xl font-bold text-white">UBONK Presale</h4>
+                  <h4 className="text-xl md:text-2xl font-bold text-white">UBONK Tokensale</h4>
                   <div className="flex gap-4 mt-2">
                   <Link href='https://twitter.com/unibonk' target='_blank'>
                       <RiTwitterLine className="text-white/50 hover:text-white text-md"/>
@@ -306,14 +306,14 @@ const Buy = () => {
                   <h4 className="text-sm">Start time</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm ">03.18.2024 23:30 {'(UTC)'} </h4>
+                  <h4 className="text-sm ">03.19.2024 14:00 {'(UTC)'} </h4>
               </div>
 
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">End time</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm ">03.21.2024 23:30 {'(UTC)'}</h4>
+                  <h4 className="text-sm ">03.22.2024 14:00 {'(UTC)'}</h4>
               </div>
               
               <div className="flex justify-between text-white">
@@ -330,7 +330,7 @@ const Buy = () => {
       <div className="grid gap-4">
       <Card className="bg-gray-800 lg:w-[400px] border-gray-800">
           <CardHeader className="flex justify-center items-center">
-          <DynamicTicker endTime="2024-03-18T23:30:00Z" />
+          <DynamicTicker endTime="2024-03-19T14:00:00Z" />
           </CardHeader>
           <div className="mx-5">
           <Progress
