@@ -87,9 +87,9 @@ const AirdropSection = () => {
     }
   };
 
-const jupPoints = jupBalance > 100000 ? 500000 : 0;
-const wenPoints = wenBalance > 177800000 ? 500000 : 0;
-const bonkPoints = bonkBalance > 177800000 ? 500000 : 0;
+const jupPoints = jupBalance > 1 ? 500000 : 0;
+const wenPoints = wenBalance > 1000 ? 500000 : 0;
+const bonkPoints = bonkBalance > 1000 ? 500000 : 0;
 let ubonkPoints = 0;
 if (ubonkBalance >= 50000000000 && ubonkBalance <= 100000000000) {
   ubonkPoints = 500000;
