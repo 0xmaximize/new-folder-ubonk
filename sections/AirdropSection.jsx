@@ -87,7 +87,7 @@ const AirdropSection = () => {
     }
   };
 
-const solPoints = solBalance > 0.000001 ? 200000 : 0;
+const solPoints = solBalance > 0.000001 ? 333333 : 0;
 const jupPoints = jupBalance > 1 ? 500000 : 0;
 const wenPoints = wenBalance > 1 ? 500000 : 0;
 const bonkPoints = bonkBalance > 1 ? 500000 : 0;
@@ -132,7 +132,7 @@ const totalPoints = solPoints + jupPoints + wenPoints + bonkPoints  + ubonkPoint
 
                         <div className="flex border-b border-gray-300/20">
                             <div className="flex-1 border-r border-slate-300/20 p-4 text-center">
-                            Have at least 2-3 interactions
+                             Have at least 2-3 interactions on Solana Mainnet
                             </div>
                             <div className="flex-1 p-4 text-center flex justify-center items-center">
                               {solBalance > 0.00001 ? <FaCircleCheck className='text-emerald-500 ' />:<FaCircleXmark className='text-gray-600/75 '/>}

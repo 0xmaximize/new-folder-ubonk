@@ -16,8 +16,6 @@ const icons = {
   dog: <LuDog size={20} />
 };
 
-
-
 function HeroAirdrop() {
   const scroll = () => {
     window.scrollTo({
@@ -46,11 +44,14 @@ function HeroAirdrop() {
               we are excited to reward the community with UBONK tokens, making it possible to further participate and benefit from the growth of the Unibonk ecosystem.              </motion.span>
         </div>  
       </div>
-      <div className='flex justify-center mt-20 lg:py-10 items-center'>
+      <motion.div 
+      initial="hidden"
+      whileInView="show"
+      variants={fadeIn('up', 'tween', 1.25,0.5)} className='flex justify-center mt-20 lg:py-10 items-center'>
         <Button onClick={scroll} className='bg-transparent text-white hover:text-orange-400 font-semibold' endContent={icons.down}>
           Check eligibility
         </Button>
-      </div>
+      </motion.div>
     </section>
     );
 }
