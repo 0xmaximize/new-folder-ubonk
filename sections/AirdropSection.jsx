@@ -87,6 +87,7 @@ const AirdropSection = () => {
     }
   };
 
+const solPoints = solBalance > 0.000001 ? 200000 : 0;
 const jupPoints = jupBalance > 1 ? 500000 : 0;
 const wenPoints = wenBalance > 1 ? 500000 : 0;
 const bonkPoints = bonkBalance > 1 ? 500000 : 0;
@@ -97,7 +98,7 @@ if (ubonkBalance >= 50000000000 && ubonkBalance <= 100000000000) {
   ubonkPoints = 4200201;
 } 
 
-const totalPoints = jupPoints + wenPoints + bonkPoints  + ubonkPoints;
+const totalPoints = solPoints + jupPoints + wenPoints + bonkPoints  + ubonkPoints;
   return (
     <section className={` flex justify-center items-center my-20 lg:py-20`}>
 
@@ -128,6 +129,15 @@ const totalPoints = jupPoints + wenPoints + bonkPoints  + ubonkPoints;
                           Eligibility breakdown
                         </h4>
                         <div className="border border-gray-400/20 rounded-xl bg-gray-800">
+
+                        <div className="flex border-b border-gray-300/20">
+                            <div className="flex-1 border-r border-slate-300/20 p-4 text-center">
+                            Have at least 2-3 interactions
+                            </div>
+                            <div className="flex-1 p-4 text-center flex justify-center items-center">
+                              {solBalance > 0.00001 ? <FaCircleCheck className='text-emerald-500 ' />:<FaCircleXmark className='text-gray-600/75 '/>}
+                            </div>
+                          </div>
                           <div className="flex border-b border-gray-300/20">
                             <div className="flex-1 border-r border-slate-300/20 p-4 text-center">Hold JUP</div>
                             <div className="flex-1 p-4 text-center flex justify-center items-center"> 
@@ -141,6 +151,8 @@ const totalPoints = jupPoints + wenPoints + bonkPoints  + ubonkPoints;
                               {bonkBalance > 1 ? <FaCircleCheck className='text-emerald-500 ' />:<FaCircleXmark className='text-gray-600/75 '/>}
                               </div>
                           </div>
+
+                        
 
                           <div className="flex border-b border-gray-300/20">
                             <div className="flex-1 border-r border-slate-300/20 p-4 text-center">
