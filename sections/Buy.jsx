@@ -51,7 +51,7 @@ const Buy = () => {
   const [txStatus, setTxStatus] = useState(''); 
   const [processing, setProcessing] = useState(false); 
   
-  const SOLToUBONKConversionRate = 5155729;
+  const SOLToUBONKConversionRate = 9990000;
 
   useEffect(() => {
     const getBalances = async () => {
@@ -275,7 +275,7 @@ const Buy = () => {
                   <h4 className="text-sm">Softcap</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm "> 20 SOL</h4>
+                  <h4 className="text-sm "> 50 SOL</h4>
               </div>
 
          
@@ -283,7 +283,7 @@ const Buy = () => {
                   <h4 className="text-sm">Presale rate</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm "> 1 SOL = 5.155.729 UBONK</h4>
+                  <h4 className="text-sm "> 1 SOL = 9.990.000 UBONK</h4>
               </div>
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">Min purchase</h4>
