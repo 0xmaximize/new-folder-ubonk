@@ -9,13 +9,17 @@ const Home = () => {
     <Navbar />
     <Hero />
   </div>
+ 
   <div className='bg-gray-900 overflow-hidden'>
+
     <ActiveSlider />
-    <Features />  
+
+    <Features /> 
+    <div className='bg-gray-800'>
+  <About />
+  </div> 
     <Insight />  
     <Spacer y={100} />
-
-    <Buy />
     </div>    
     <div className='hidden lg:flex bg-gray-900'>
       <Spacer y={200} />
@@ -25,7 +29,7 @@ const Home = () => {
     </div>
   <div className='bg-gray-900 overflow-hidden'>
   <Spacer y={100} />
-  <About />
+
     <Community />
     <Footer />
   </div>

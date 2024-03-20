@@ -39,7 +39,6 @@ function Hero() {
             whileInView="show"
             variants={fadeIn('up', 'tween', 0.75, 0.5)}
             className={`text-gray-100/50 text-[16px] lg:text-xl my-8 flex justify-center items-center text-center md:px-0`}>   
-                Unibonk is a meme decentralized-token  based on solana a better part in the future!
           </motion.span>
           <div className=' justify-center gap-4 my-20 flex md:hidden'>
             <Link href='/ubonk' target='_blank'>

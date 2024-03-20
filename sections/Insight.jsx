@@ -28,7 +28,7 @@ const Insight = () => {
                   <h4 className="text-white font-extrabold text-xl lg:text-6xl z-10">NOW LIVE</h4>
                 </div>
        
-                  <Link href='/airdrop'>
+                  <Link href='/'>
                 <Button variant='flat' color='warning' radius='md' size='md' className='bg-orange-500 hover:bg-orange-400 text-orange-800/75 hover:text-orange-100 font-semibold' endContent={<FaArrowRight />}>
                   More details 
                 </Button>

@@ -5,7 +5,7 @@ export const ServiceData = [
     title: "AIRDROP",
     content: "UBONK AIRDROP NOW LIVE",
     image: 'insight2.png',
-    to:'/airdrop'
+    to:'/'
   },
   {
     title: "PRESALE",
@@ -61,12 +61,12 @@ export const exploreLinks = [
 export const usageLinks = [
  
   {
-    title: "Solscan",
+    title: "UBONK on Solscan",
     to:"https://solscan.io/token/8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5"
   },
 
   {
-    title: "Birdeye",
+    title: "UBONK on Birdeye",
     to:"https://birdeye.so/token/8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5?chain=solana"
   }
 

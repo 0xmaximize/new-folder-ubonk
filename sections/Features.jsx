@@ -38,7 +38,7 @@ const Features = () => {
                     <h4 className='text-gray-500 group-hover:text-orange-500 lg:max-w-[350px]'>Seamless token swapping, low fees, and endless possibilities on Solana blockchain</h4>
                   </div>
                   <div className='flex pt-10 md:pt-12'>
-                    <Button size='md' variant='flat' endContent={icons.arrow} className='border-2 bg-transparent border-gray-800 group-hover:border-orange-400 group-hover:bg-orange-400 text-gray-500 group-hover:text-orange-100'>Start Swap</Button>
+                    <Button size='md' variant='flat' endContent={icons.arrow} className='border-2 bg-transparent border-gray-800 group-hover:border-orange-400 group-hover:bg-orange-400 text-gray-500 group-hover:text-orange-100'>Coming soon</Button>
                   </div>
                 </CardBody>
             </motion.div>
@@ -59,7 +59,7 @@ const Features = () => {
                     <h4 className='text-gray-500 group-hover:text-orange-500 md:text-md lg:max-w-[350px]'>Maximize your trading potential and sniping premiere token fastest</h4>
                   </div>
                   <div className='flex pt-10 md:pt-12'>
-                    <Button size='md' variant='flat' endContent={icons.arrow} className='border-2 bg-transparent border-gray-800 group-hover:border-orange-400 group-hover:bg-orange-400 text-gray-500 group-hover:text-orange-100'>Visit BOTs</Button>
+                    <Button size='md' variant='flat' endContent={icons.arrow} className='border-2 bg-transparent border-gray-800 group-hover:border-orange-400 group-hover:bg-orange-400 text-gray-500 group-hover:text-orange-100'>Coming Soon</Button>
                   </div>
                 </CardBody>
             </motion.div>

@@ -132,7 +132,7 @@ const totalPoints = solPoints + jupPoints + wenPoints + bonkPoints  + ubonkPoint
 
                         <div className="flex border-b border-gray-300/20">
                             <div className="flex-1 border-r border-slate-300/20 p-4 text-center">
-                             Have at least 2-3 interactions on Solana Mainnet
+                             Have at least 2-3 interaction on Solana Mainnet
                             </div>
                             <div className="flex-1 p-4 text-center flex justify-center items-center">
                               {solBalance > 0.00001 ? <FaCircleCheck className='text-emerald-500 ' />:<FaCircleXmark className='text-gray-600/75 '/>}

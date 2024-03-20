@@ -37,6 +37,8 @@ const Ubonk = () => {
           <div className='bg-gray-900 overflow-hidden'>
           <AirdropSection />
           <Spacer y={200} />
+          <Accordions />
+          <Spacer y={200} />
 
           <BuyFooter />
     </div>
