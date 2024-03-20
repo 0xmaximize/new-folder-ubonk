@@ -269,27 +269,15 @@ const Buy = () => {
 
                   <h4 className="text-sm">98,990,000,000 UBONK</h4>
               </div>
-              <div className="hidden md:flex justify-between text-white">
-                  <h4 className="text-sm">Presale Allocation</h4>
-                  <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
-
-                  <h4 className="text-sm "> 3.093.437.500 UBONK</h4>
-              </div>
-              
+         
 
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">Softcap</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm "> 150 SOL</h4>
+                  <h4 className="text-sm "> 20 SOL</h4>
               </div>
 
-              <div className="flex justify-between text-white">
-                  <h4 className="text-sm">Hardcap</h4>
-                  <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
-
-                  <h4 className="text-sm "> 600 SOL</h4>
-              </div>
          
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">Presale rate</h4>
@@ -301,6 +289,11 @@ const Buy = () => {
                   <h4 className="text-sm">Min purchase</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
                   <h4 className="text-sm">0.25 SOL</h4>
+              </div>
+              <div className="flex justify-between text-white">
+                  <h4 className="text-sm">Max purchase</h4>
+                  <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
+                  <h4 className="text-sm">10 SOL</h4>
               </div>
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">Start time</h4>
