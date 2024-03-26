@@ -288,12 +288,12 @@ const Buy = () => {
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">Min purchase</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
-                  <h4 className="text-sm">0.2 SOL</h4>  
+                  <h4 className="text-sm">0.5 SOL</h4>  
               </div>
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">Max purchase</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
-                  <h4 className="text-sm">10 SOL</h4>
+                  <h4 className="text-sm">5 SOL</h4>
               </div>
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">Start time</h4>
@@ -306,7 +306,7 @@ const Buy = () => {
                   <h4 className="text-sm">End time</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm ">03.26.2024 20:00 {'(UTC)'}</h4>
+                  <h4 className="text-sm ">03.27.2024 14:00 {'(UTC)'}</h4>
               </div>
               
               <div className="flex justify-between text-white">
@@ -323,7 +323,7 @@ const Buy = () => {
       <div className="grid gap-4">
       <Card className="bg-gray-800 lg:w-[400px] border-gray-800">
           <CardHeader className="flex justify-center items-center">
-          <DynamicTicker endTime="2024-03-26T20:00:00Z" />
+          <DynamicTicker endTime="2024-03-27T14:00:00Z" />
           </CardHeader>
           <div className="mx-5">
           <Progress
@@ -357,9 +357,9 @@ const Buy = () => {
           onChange={(e) => setSolAmount(e.target.value)}
           type="number"
           variant="bordered"
-          placeholder="0.2"
+          placeholder="0.5"
           color="warning"
-          min="0.2"
+          min="0.5"
           size='lg'
           classNames={{
           innerWrapper:'bg-gray-700 font-bold',
@@ -402,7 +402,7 @@ const Buy = () => {
                 size='lg'
                 className="px-4  mx-4 py-4 my-4 mb-4 bg-[#d17f2c] hover:bg-orange-400 text-orange-800/75 hover:text-orange-100 font-semibold"
               
-                isDisabled={!!txSig || parseFloat(solAmount) < 0.2 || solAmount.trim() === ''}
+                isDisabled={!!txSig || parseFloat(solAmount) < 0.5 || solAmount.trim() === ''}
                 >
                 {txSig ? 'Loading' : 'Buy with SOL'}
                 {txSig && icons.spinner}
