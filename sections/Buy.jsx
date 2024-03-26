@@ -306,7 +306,7 @@ const Buy = () => {
                   <h4 className="text-sm">End time</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm ">03.26.2024 14:00 {'(UTC)'}</h4>
+                  <h4 className="text-sm ">03.26.2024 20:00 {'(UTC)'}</h4>
               </div>
               
               <div className="flex justify-between text-white">
@@ -323,11 +323,11 @@ const Buy = () => {
       <div className="grid gap-4">
       <Card className="bg-gray-800 lg:w-[400px] border-gray-800">
           <CardHeader className="flex justify-center items-center">
-          <DynamicTicker endTime="2024-03-26T14:00:00Z" />
+          <DynamicTicker endTime="2024-03-26T20:00:00Z" />
           </CardHeader>
           <div className="mx-5">
           <Progress
-          value={18.4}
+          value={20.2}
           maxValue={100}
             classNames={{
               base:'py-4',
@@ -338,7 +338,7 @@ const Buy = () => {
           </div>
 
           <div className="flex justify-between px-5 mt-[-4px]">
-            <h4 className="font-bold text-sm text-orange-200">18.4 SOL</h4>
+            <h4 className="font-bold text-sm text-orange-200">20.2 SOL</h4>
             <h4 className="font-bold text-sm text-orange-200">100 SOL</h4>
           </div>
           <CardBody>
