@@ -301,7 +301,7 @@ const Buy = () => {
            <div className="flex justify-between text-white">
                   <h4 className="text-sm font-bold">Locked LP</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
-                  <h4 className="text-sm text-green-400 hover:text-green-200 font-bold "><Link href='https://solscan.io/token/89ZKE4aoyfLBe2RuV6jM3JGNhaV18Nxh8eNtjRcndBip' target='_blank'>Raydium V4 {'(RAY-SOL)'}</Link></h4>
+                  <Link href='https://solscan.io/token/89ZKE4aoyfLBe2RuV6jM3JGNhaV18Nxh8eNtjRcndBip' target='_blank'> <h4 className="text-sm text-green-400 hover:text-green-200 font-bold ">Raydium V4 {'(RAY-SOL)'}</h4></Link>
               </div>
           
 
