@@ -289,7 +289,7 @@ const Buy = () => {
                   <h4 className="text-sm">Fairlaunch</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm ">>04.05.2024 22:00L</h4>
+                  <h4 className="text-sm ">04.05.2024 22:00L</h4>
               </div>
             <div className="flex justify-between text-white">
                   <h4 className="text-sm">End time</h4>
