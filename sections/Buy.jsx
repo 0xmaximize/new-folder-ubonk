@@ -207,7 +207,7 @@ const Buy = () => {
                   classNames="m-5"
                 />          
                 <div className="grid ">
-                  <h4 className="text-xl md:text-2xl font-bold text-white">UBONK Presale</h4>
+                  <h4 className="text-xl md:text-2xl font-bold text-white">UBONK Presale {'(LAST ROUND)'}</h4>
                   <div className="flex gap-4 mt-2">
                   <Link href='https://twitter.com/unibonk' target='_blank'>
                       <RiTwitterLine className="text-white/50 hover:text-white text-md"/>
@@ -269,15 +269,6 @@ const Buy = () => {
                   <h4 className="text-sm">98,990,000,000 UBONK</h4>
               </div>
          
-
-              <div className="flex justify-between text-white">
-                  <h4 className="text-sm">Softcap</h4>
-                  <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
-
-                  <h4 className="text-sm "> 100 SOL</h4>
-              </div>
-
-    
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">Presale rate</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
@@ -292,22 +283,21 @@ const Buy = () => {
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">Max purchase</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
-                  <h4 className="text-sm">5 SOL</h4>
+                  <h4 className="text-sm">10 SOL</h4>
               </div>
-              <div className="flex justify-between text-white">
-                  <h4 className="text-sm">Start time</h4>
+                <div className="flex justify-between text-white">
+                  <h4 className="text-sm">Fairlaunch</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm ">03.29.2024 14:00 {'(UTC)'} </h4>
+                  <h4 className="text-sm ">>04.05.2024 22:00L</h4>
               </div>
-
-              <div className="flex justify-between text-white">
+            <div className="flex justify-between text-white">
                   <h4 className="text-sm">End time</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm ">04.03.2024 24:59 {'(UTC)'}</h4>
+                  <h4 className="text-sm ">05.04.2024 20:00 {'(UTC)'} </h4>
               </div>
-              
+
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">Contract Address</h4>
                   <Link href='https://solscan.io/token/8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5' target='_blank'>
@@ -322,11 +312,11 @@ const Buy = () => {
       <div className="grid gap-4">
       <Card className="bg-gray-800 lg:w-[400px] border-gray-800">
           <CardHeader className="flex justify-center items-center">
-          <DynamicTicker endTime="2024-04-03T14:00:00Z" />
+          <DynamicTicker endTime="2024-04-05T20:00:00Z" />
           </CardHeader>
           <div className="mx-5">
           <Progress
-          value={51}
+          value={76}
           maxValue={100}
             classNames={{
               base:'py-4',
@@ -337,8 +327,8 @@ const Buy = () => {
           </div>
 
           <div className="flex justify-between px-5 mt-[-4px]">
-            <h4 className="font-bold text-sm text-orange-200">101.5 SOL</h4>
-            <h4 className="font-bold text-sm text-orange-200">200 SOL</h4>
+            <h4 className="font-bold text-sm text-orange-200">152.5 SOL</h4>
+            <h4 className="font-bold text-sm text-orange-200">250 SOL</h4>
           </div>
           <CardBody>
           {connected && (
