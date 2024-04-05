@@ -295,21 +295,21 @@ const Buy = () => {
                 <div className="flex justify-between text-white">
                   <h4 className="text-sm font-bold">Fairlaunch</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
-                  <h4 className="text-sm font0bold ">04.05.2024 22:00L</h4>
+                  <h4 className="text-sm font0bold ">04.05.2024 22:00 {'(UTC)'}</h4>
               </div>
                 
            <div className="flex justify-between text-white">
                   <h4 className="text-sm font-bold">Locked LP</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
-                  <h4 className="text-sm font0bold "><Link href='https://solscan.io/token/89ZKE4aoyfLBe2RuV6jM3JGNhaV18Nxh8eNtjRcndBip' target='_blank'>Raydium V4 {'(RAY-SOL)'}</Link></h4>
+                  <h4 className="text-sm text-green-400 hover:text-green-200 font-bold "><Link href='https://solscan.io/token/89ZKE4aoyfLBe2RuV6jM3JGNhaV18Nxh8eNtjRcndBip' target='_blank'>Raydium V4 {'(RAY-SOL)'}</Link></h4>
               </div>
           
 
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">Contract Address</h4>
                   <Link href='https://solscan.io/token/8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5' target='_blank'>
-                    <h4 className="text-sm hidden md:flex  items-center text-orange-200 hover:text-orange-300">8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5 <CgArrowTopRight   size={20}/></h4>
-                  <h4 className="text-sm md:hidden flex  items-center text-orange-200 hover:text-orange-300">8QcA6zp6Q..tUmKKTMjq5 <CgArrowTopRight   size={20}/></h4>
+                    <h4 className="text-sm hidden md:flex  items-center text-green-400 hover:text-green-200">8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5 <CgArrowTopRight   size={20}/></h4>
+                  <h4 className="text-sm md:hidden flex  items-center text-green-400 hover:text-green-200">8QcA6zp6Q..tUmKKTMjq5 <CgArrowTopRight   size={20}/></h4>
                   </Link>
               </div>
           </div>
