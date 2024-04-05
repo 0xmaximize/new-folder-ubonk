@@ -65,7 +65,7 @@ export default function Navbar() {
           <div className="flex items-center z-10">
             <Link href='/ubonk'>
               <Button size="md" variant='ghost' radius="md"  color="bg-orange-500" 
-                className='bg-transparent hover:bg-orange-500 border-orange-500 text-orange-100 hover:text-orange-100 font-semibold' endContent={<LuDog size={20} />}> GET UBONK</Button>
+                className='bg-transparent hover:bg-orange-500 border-orange-500 text-orange-100 hover:text-orange-100 font-semibold' endContent={<LuDog size={20} />}> BUY PRESALE</Button>
             </Link>
             <div className="flex lg:hidden">
             <Dropdown radius="sm" shadow="lg" className="bg-gray-900 text-center w-full">
