@@ -45,7 +45,7 @@ const Buy = () => {
   const [txSig, setTxSig] = useState('');
   const [solAmount, setSolAmount] = useState('');
   const { publicKey, disconnect, wallet, balance, connected, sendTransaction } = useWallet();
-  const receiver = 'DivM41RC9PFZLqZW2aNpGJb2X8z7xG9DQY758tKZP8EP';
+  const receiver = '8PVwDbMzKiuEXV5WN7Cfd249xAJjokv7VVpmePPMkikh';
   const { connection } = useConnection();
   const [solBalance, setSolBalance] = useState(null);
   const [txStatus, setTxStatus] = useState(''); 
@@ -289,7 +289,7 @@ const Buy = () => {
                   <h4 className="text-sm">End time</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
-                  <h4 className="text-sm ">05.04.2024 20:00 {'(UTC)'} </h4>
+                  <h4 className="text-sm ">04.05.2024 20:00 {'(UTC)'} </h4>
               </div>
                 
                 <div className="flex justify-between text-white">
