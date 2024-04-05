@@ -42,7 +42,7 @@ function Hero() {
           </motion.span>
           <div className=' justify-center gap-4 my-20 flex md:hidden'>
             <Link href='/ubonk' target='_blank'>
-              <Button radius='md' size='md' className='bg-orange-500 hover:bg-orange-400 text-orange-800/75 hover:text-orange-100 font-semibold' endContent={icons.arrow}>Get UBONK</Button>
+              <Button radius='md' size='md' className='bg-orange-500 hover:bg-orange-400 text-orange-800/75 hover:text-orange-100 font-semibold' endContent={icons.arrow}>BUY PRESALE</Button>
             </Link>
             <Link href='hts://docs.unibonk.meme/ubonk-coin/tokenomics' target='_blank'>
               <Button variant='ghost' size='md' radius='md' color='bg-orange-500'  className='bg-transparent hover:bg-orange-500 border-orange-500 text-orange-100 hover:text-orange-100 font-semibold' endContent={icons.arrow}>Tokenomics</Button>
@@ -52,7 +52,7 @@ function Hero() {
             <Link href='/ubonk' target='_blank'>
             <Button radius='md' size='lg' 
             className='bg-orange-500 hover:text-orange-100 hover:bg-orange-400 text-orange-800/75
-            font-semibold' endContent={<LuDog size={24}/>}>GET UBONK</Button>
+            font-semibold' endContent={<LuDog size={24}/>}>BUY PRESALE</Button>
             </Link>
             <Link href='https://docs.unibonk.meme/ubonk-coin/tokenomics' target='_blank'>
             <Button variant='ghost' radius='md' color='bg-orange-500' size='lg' 
