@@ -307,8 +307,10 @@ const Buy = () => {
    
                 
              
-              <div className="flex justify-between text-white">
+           <div className="flex justify-between text-white">
                   <h4 className="text-sm">Contract Address</h4>
+                               <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
+
                     <Link href='https://solscan.io/token/8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5' target='_blank'>  <h4 className="text-sm hidden md:flex  items-center text-green-400 hover:text-green-200"> 8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5 <CgArrowTopRight   size={20}/></h4></Link>
             
                           <Link href='https://solscan.io/token/8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5' target='_blank'> 
