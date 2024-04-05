@@ -285,18 +285,25 @@ const Buy = () => {
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
                   <h4 className="text-sm">10 SOL</h4>
               </div>
-                <div className="flex justify-between text-white">
-                  <h4 className="text-sm">Fairlaunch</h4>
-                  <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
-
-                  <h4 className="text-sm ">04.05.2024 22:00L</h4>
-              </div>
-            <div className="flex justify-between text-white">
+                  <div className="flex justify-between text-white">
                   <h4 className="text-sm">End time</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
                   <h4 className="text-sm ">05.04.2024 20:00 {'(UTC)'} </h4>
               </div>
+                
+                <div className="flex justify-between text-white">
+                  <h4 className="text-sm font-bold">Fairlaunch</h4>
+                  <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
+                  <h4 className="text-sm font0bold ">04.05.2024 22:00L</h4>
+              </div>
+                
+           <div className="flex justify-between text-white">
+                  <h4 className="text-sm font-bold">Locked LP</h4>
+                  <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
+                  <h4 className="text-sm font0bold "><Link href='https://solscan.io/token/89ZKE4aoyfLBe2RuV6jM3JGNhaV18Nxh8eNtjRcndBip' target='_blank'>Raydium V4 {'(RAY-SOL)'}</Link></h4>
+              </div>
+          
 
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">Contract Address</h4>
