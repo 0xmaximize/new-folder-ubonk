@@ -330,7 +330,7 @@ const Buy = () => {
           </CardHeader>
           <div className="mx-5">
           <Progress
-          value={82}
+          value={84.5}
           maxValue={100}
             classNames={{
               base:'py-4',
@@ -341,7 +341,7 @@ const Buy = () => {
           </div>
 
           <div className="flex justify-between px-5 mt-[-4px]">
-            <h4 className="font-bold text-sm text-orange-200">165
+            <h4 className="font-bold text-sm text-orange-200">166.5
               
               
               
