@@ -76,14 +76,14 @@ const About = () => {
             </div>
             
             <div className="my-10 md:text-start text-center">
-              <h4 className="text-white py-4">
-              Fairlaunch : 05.04.2024 22:00 (UTC) | <Link href='/ubonk><span className="font-mono font-bold text-sm md:text-lg text-green-400 "> GET $UBONK PRESALE</span> </Link>
-
-              </h4>
+             <Link href='/ubonk> <h4 className="text-white py-4">
+                Fairlaunch : 05.04.2024 22:00 (UTC) <span className="font-mono font-bold text-sm md:text-lg text-green-400 "> GET $UBONK PRESALE</span>  
+              </h4> </Link>
+                                                                                                                                                           
               <h4 className="text-white">
-              Contract : <span className="font-mono font-bold text-sm md:text-lg text-green-400 "> 8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5</span>
-
+                Contract : <span className="font-mono font-bold text-sm md:text-lg text-green-400 "> 8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5</span>
               </h4>
+                                                                                                                                                           
                  <div className="flex justify-center items-center md:justify-start mt-4 gap-3">
                     <Link href='https://solscan.io/token/8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5' target='_blank'>
                       <Image src='https://public-api.solscan.io/logo.png' alt='' className="w-[20px] h-[20px] rounded-full"/>
