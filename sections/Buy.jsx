@@ -301,21 +301,28 @@ const Buy = () => {
            <div className="flex justify-between text-white">
                   <h4 className="text-sm font-bold">Locked LP</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
-                  <Link href='https://solscan.io/token/89ZKE4aoyfLBe2RuV6jM3JGNhaV18Nxh8eNtjRcndBip' target='_blank'> <h4 className="text-sm text-green-400 hover:text-green-200 font-bold ">Raydium V4 {'(RAY-SOL)'}</h4></Link>
-              </div>
+                   <Link href='https://solscan.io/token/89ZKE4aoyfLBe2RuV6jM3JGNhaV18Nxh8eNtjRcndBip' target='_blank'><h4 className="text-sm text-green-400 hover:text-green-200 font-bold">Raydium V4 {'(RAY-SOL)'}</h4></Link>
+            </div>
           
-
+   
+                
+             
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">Contract Address</h4>
-             
-                     <Link href='https://solscan.io/token/8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5' target='_blank'> <h4 className="text-sm hidden md:flex  items-center text-green-400 hover:text-green-200"> 8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5 <CgArrowTopRight   size={20}/></h4>
-                  <h4 className="text-sm md:hidden flex  items-center text-green-400 hover:text-green-200">8QcA6zp6Q..tUmKKTMjq5 <CgArrowTopRight   size={20}/></h4></Link>
-                  </Link>
+                    <Link href='https://solscan.io/token/8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5' target='_blank'>  <h4 className="text-sm hidden md:flex  items-center text-green-400 hover:text-green-200"> 8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5 <CgArrowTopRight   size={20}/></h4></Link>
+            
+                          <Link href='https://solscan.io/token/8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5' target='_blank'> 
+                  <h4 className="text-sm md:hidden flex  items-center text-green-400 hover:text-green-200">
+                    8QcA6zp6Q..tUmKKTMjq5 
+                    <CgArrowTopRight  size={20} />
+                  </h4>
+                       </Link>      
               </div>
           </div>
+            
           </CardBody>
-      
       </Card>
+        
       <div className="grid gap-4">
       <Card className="bg-gray-800 lg:w-[400px] border-gray-800">
           <CardHeader className="flex justify-center items-center">
