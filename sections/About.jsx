@@ -76,6 +76,10 @@ const About = () => {
             </div>
             
             <div className="my-10 md:text-start text-center">
+              <h4 className="text-white py-4">
+              Fairlaunch : 05.04.2024 22:00 (UTC) | <Link href='/ubonk><span className="font-mono font-bold text-sm md:text-lg text-green-400 "> GET $UBONK PRESALE</span> </Link>
+
+              </h4>
               <h4 className="text-white">
               Contract : <span className="font-mono font-bold text-sm md:text-lg text-green-400 "> 8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5</span>
 
