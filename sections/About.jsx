@@ -83,15 +83,17 @@ const About = () => {
               <h4 className="text-white">
                 Contract : <span className="font-mono font-bold text-sm md:text-lg text-green-400 "> 8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5</span>
               </h4>
-               </div>                    
+                            
                                                               
                  <div className="flex justify-center items-center md:justify-start mt-4 gap-3">
-                    <Link href='https://solscan.io/token/8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5' target='_blank'>
+                    <Link href='https://solscan.io/token/8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5' target='_blank'>                                  
                       <Image src='https://public-api.solscan.io/logo.png' alt='' className="w-[20px] h-[20px] rounded-full"/>
                     </Link>
+              
                     <Link href='https://birdeye.so/token/8QcA6zp6QNV7mifrJgaSztPw2hzM4tu8VxtUmKKTMjq5?chain=solana' target='_blank'>
                       <Image src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAjVBMVEVHcEz/ZRb/Zxb/eBL/dRP/vwP/ig7/tgX/jg3/jgz/zgD/eBL/gRD/wQT/rQf/tAb/ZBf/Yxf/Yhf/zgD/vAT/ygH/mAz/qAj/////bhT/mQb/dhH/aBX/sAP/kgX//Pf/dwD/hQb/nwL/qQL/uwT/yZ3/tVL/59f/oS3/uXj/ygD/iDD/olX/9Or/26t9B5teAAAAGHRSTlMAdQ2cPvBMQUD8SOvIBIDegqYpiTHSbNrH1elhAAAAvUlEQVQ4jd2PVxaCMBAA6U3BrktCKh3E+x/PgO/5Q8IBmN+Z3U0sa8c4tn3d8l5eFMXF7IM8n4uzcR5jvCQGH/HxV7iO3osRWo7xwTQvxBug59gz+DgWvFYrDAsiSmNRT8D4Ue8RolRdMAWhlKroVNAKV+ubDqmiAahFoPFlA6yXsmfAaKzxhDQMFlhHo7WvCCHlRyVTjdBT4yv/pAqFlHL9gLDy75aVZnPzyjT3B1/37T/J8Nj06S3Z9DvgC7vEE0aY2FgUAAAAAElFTkSuQmCC' alt='' className="w-[21px] h-[21px] rounded-full"/>
                     </Link>
+              
                     <Link href=''>
                       <Image src='https://static.coingecko.com/s/thumbnail-d5a7c1de76b4bc1332e48227dc1d1582c2c92721b5552aae76664eecb68345c9.png' alt='' className="w-[20px] h-[20px] rounded-full"/>
                     </Link>
