@@ -32,7 +32,7 @@ const Ticker = ({ endTime }) => {
 
   return (
     <div className="text-center">
-      <h4 className="text-white font-bold">Presale ends in</h4>
+      <h4 className="text-white font-bold">Presale Starts in</h4>
       <div className="flex gap-4 mt-4">
         <div className="bg-[#d17f2c] p-2 rounded-md w-[40px]">
           <h4 className="font-bold text-orange-100">{formatTimeUnit(timeLeft.days)}</h4>
