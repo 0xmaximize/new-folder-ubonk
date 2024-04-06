@@ -327,9 +327,11 @@ const Buy = () => {
         
       <div className="grid gap-4">
       <Card className="bg-gray-800 lg:w-[400px] border-gray-800">
+        
           <CardHeader className="flex justify-center items-center">
             <h4 className='text-3xl text-white>Get +1.5 Multiple bonus presale!</h4>
           </CardHeader>
+            
           <div className="mx-5">
           <Progress
           value={86}
@@ -343,29 +345,11 @@ const Buy = () => {
           </div>
 
           <div className="flex justify-between px-5 mt-[-4px]">
-            <h4 className="font-bold text-sm text-orange-200">170
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              SOL</h4>
+            <h4 className="font-bold text-sm text-orange-200">170 SOL</h4>
             <h4 className="font-bold text-sm text-orange-200">250 SOL</h4>
           </div>
-          <CardBody>
+
+        <CardBody>
           {connected && (
           <div className='py-2 flex items-center gap-2'>
            <h4 className="text-orange-200 font-light text-xs "> amount: 
