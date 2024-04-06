@@ -33,9 +33,9 @@ const Ticker = ({ endTime }) => {
   return (
     <div className="text-center">
        <h4 className="text-white font-bold">PRESALE IS LIVE</h4>
-       <span className='text-xs text-white font-mono py-2'>Get multiple x1.5 from your total buy on presale</span> 
-      <span className='text-xs text-white font-mono py-2'> Ditribution bonus presale started in</span>      
-      <div className="flex gap-4 mt-4">
+       <span className='text-xs text-white font-mono py-2'>Get multiple x1.5 from your total buy, distribudted every 12 hours</span> 
+      <span className='text-md text-white font-bold py-2'> Ditribution bonus presale started in</span>      
+      <  div className="flex justify-center items-center gap-4 mt-4">
         <div className="bg-[#d17f2c] p-2 rounded-md w-[40px]">
           <h4 className="font-bold text-orange-100">{formatTimeUnit(timeLeft.days)}</h4>
         </div>
