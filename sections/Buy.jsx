@@ -45,7 +45,7 @@ const Buy = () => {
   const [txSig, setTxSig] = useState('');
   const [solAmount, setSolAmount] = useState('');
   const { publicKey, disconnect, wallet, balance, connected, sendTransaction } = useWallet();
-  const receiver = '8PVwDbMzKiuEXV5WN7Cfd249xAJjokv7VVpmePPMkikh';
+  const receiver = '9um42TDsXYGTn8bbhzFyy6ES6tpqpjQF1BMkC7Uajyjv';
   const { connection } = useConnection();
   const [solBalance, setSolBalance] = useState(null);
   const [txStatus, setTxStatus] = useState(''); 
