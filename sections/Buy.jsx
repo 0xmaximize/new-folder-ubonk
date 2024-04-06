@@ -286,7 +286,7 @@ const Buy = () => {
                   <h4 className="text-sm">10 SOL</h4>
               </div>
                   <div className="flex justify-between text-white">
-                  <h4 className="text-sm">End time</h4>
+                  <h4 className="text-sm">Start time</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
                   <h4 className="text-sm ">05.04.2024 20:00 {'(UTC)'} </h4>
@@ -295,7 +295,7 @@ const Buy = () => {
                 <div className="flex justify-between text-white">
                   <h4 className="text-sm font-bold">Fairlaunch</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
-                  <h4 className="text-sm font0bold ">05.04.2024 22:00 {'(UTC)'}</h4>
+                  <h4 className="text-sm font0bold "> after 250 SOL CAPs is reached</h4>
               </div>
                 
            <div className="flex justify-between text-white">
@@ -328,7 +328,7 @@ const Buy = () => {
       <div className="grid gap-4">
       <Card className="bg-gray-800 lg:w-[400px] border-gray-800">
           <CardHeader className="flex justify-center items-center">
-          <DynamicTicker endTime="2024-04-05T22:00:00Z" />
+            <h4 className='text-3xl text-white>Get +1.5 Multiple bonus presale!</h4>
           </CardHeader>
           <div className="mx-5">
           <Progress
@@ -343,7 +343,7 @@ const Buy = () => {
           </div>
 
           <div className="flex justify-between px-5 mt-[-4px]">
-            <h4 className="font-bold text-sm text-orange-200">169
+            <h4 className="font-bold text-sm text-orange-200">170
               
               
               
