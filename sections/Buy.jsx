@@ -325,13 +325,11 @@ const Buy = () => {
           </CardBody>
       </Card>
         
-      <div className="grid gap-4">
+       <div className="grid gap-4">
       <Card className="bg-gray-800 lg:w-[400px] border-gray-800">
-        
           <CardHeader className="flex justify-center items-center">
-            <h4 className='text-3xl text-white>Get +1.5 Multiple bonus presale!</h4>
+          <DynamicTicker endTime="2024-05-09T14:00:00Z" />
           </CardHeader>
-            
           <div className="mx-5">
           <Progress
           value={86}
