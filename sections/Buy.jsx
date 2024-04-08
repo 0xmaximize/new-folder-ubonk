@@ -256,7 +256,7 @@ const Buy = () => {
                   <h4 className="text-sm font-bold">UBONK</h4>
               </div>
           
-              <div className="flex justify-between text-white">
+              <div className="flex justify-betweden text-white">
                   <h4 className="text-sm ">Decimals</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
 
@@ -328,7 +328,7 @@ const Buy = () => {
        <div className="grid gap-4">
       <Card className="bg-gray-800 lg:w-[400px] border-gray-800">
           <CardHeader className="flex justify-center items-center">
-          <DynamicTicker endTime="2024-04-08T14:00:00Z" />
+          <DynamicTicker endTime="2024-04-09T23:49:00Z" />
           </CardHeader>
           <div className="mx-5">
           <Progress
