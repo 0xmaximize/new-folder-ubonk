@@ -332,7 +332,7 @@ const Buy = () => {
           </CardHeader>
           <div className="mx-5">
           <Progress
-          value={88.9}
+          value={89.5}
           maxValue={100}
             classNames={{
               base:'py-4',
