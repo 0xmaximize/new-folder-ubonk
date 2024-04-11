@@ -343,7 +343,7 @@ const Buy = () => {
           </div>
 
           <div className="flex justify-between px-5 mt-[-4px]">
-            <h4 className="font-bold text-sm text-orange-200">203.95SOL</h4>
+            <h4 className="font-bold text-sm text-orange-200">204.45.SOL</h4>
             <h4 className="font-bold text-sm text-orange-200">250 SOL</h4>
           </div>
 
