@@ -329,7 +329,7 @@ const Buy = () => {
       <Card className="bg-gray-800 lg:w-[400px] border-gray-800">
           <CardHeader className="flex justify-center items-center">
           /*<DynamicTicker endTime="2024-04-11T23:49:00Z" />*/
-            <H4 className='py-4 text-white text-xl font-bold'>Distribution on going v.3</H4>
+          <DynamicTicker endTime="2024-04-12T00:30:00Z" />
           </CardHeader>
           <div className="mx-5">
           <Progress
