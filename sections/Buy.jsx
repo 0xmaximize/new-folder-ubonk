@@ -278,7 +278,7 @@ const Buy = () => {
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">Min purchase</h4>
                   <div className="w-full flex-1 border-t-2 mx-2 mt-[15px] border-dotted border-white/5"/>
-                  <h4 className="text-sm">0.5 SOL</h4>  
+                  <h4 className="text-sm">1 SOL</h4>  
               </div>
               <div className="flex justify-between text-white">
                   <h4 className="text-sm">Max purchase</h4>
@@ -363,9 +363,9 @@ const Buy = () => {
           onChange={(e) => setSolAmount(e.target.value)}
           type="number"
           variant="bordered"
-          placeholder="0.5"
+          placeholder="1"
           color="warning"
-          min="0.5"
+          min="1"
           size='lg'
           classNames={{
           innerWrapper:'bg-gray-700 font-bold',
@@ -408,7 +408,7 @@ const Buy = () => {
                 size='lg'
                 className="px-4  mx-4 py-4 my-4 mb-4 bg-[#d17f2c] hover:bg-orange-400 text-orange-800/75 hover:text-orange-100 font-semibold"
               
-                isDisabled={!!txSig || parseFloat(solAmount) < 0.5 || solAmount.trim() === ''}
+                isDisabled={!!txSig || parseFloat(solAmount) < 1 || solAmount.trim() === ''}
                 >
                 {txSig ? 'Loading' : 'Buy with SOL'}
                 {txSig && icons.spinner}
