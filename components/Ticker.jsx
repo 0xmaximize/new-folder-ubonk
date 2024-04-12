@@ -34,7 +34,7 @@ const Ticker = ({ endTime }) => {
     <div className="text-center">
       <div className='grid text-center justify-center items-center'>
       <h4 className="text-white font-bold">PRESALE IS LIVE</h4>
-       <span className='text-xs px-2 text-white font-mono py-2'>Distribution V.3 is started until : </span> 
+       <span className='text-xs px-2 text-white font-mono py-2'>Get multiple bonus x1.5 from your total buy on presale and distributed v4 will be sent at :</span> 
      </div>
       <  div className="flex justify-center items-center gap-4 mt-4">
         <div className="bg-[#d17f2c] p-2 rounded-md w-[40px]">
