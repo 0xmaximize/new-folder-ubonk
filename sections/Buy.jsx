@@ -328,7 +328,6 @@ const Buy = () => {
        <div className="grid gap-4">
       <Card className="bg-gray-800 lg:w-[400px] border-gray-800">
           <CardHeader className="flex justify-center items-center">
-          /*<DynamicTicker endTime="2024-04-11T23:49:00Z" />*/
           <DynamicTicker endTime="2024-04-12T00:30:00Z" />
           </CardHeader>
           <div className="mx-5">
