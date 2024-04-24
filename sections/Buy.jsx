@@ -328,12 +328,12 @@ const Buy = () => {
        <div className="grid gap-4">
       <Card className="bg-gray-800 lg:w-[400px] border-gray-800">
           <CardHeader className="flex justify-center items-center">
-          <DynamicTicker endTime="2024-04-24T14:00:00Z" />
+          <DynamicTicker endTime="2024-04-25T14:00:00Z" />
           
           </CardHeader>
           <div className="mx-5">
           <Progress
-          value={94.1}
+          value={94.2}
           maxValue={100}
             classNames={{
               base:'py-4',
@@ -344,7 +344,7 @@ const Buy = () => {
           </div>
 
           <div className="flex justify-between px-5 mt-[-4px]">
-            <h4 className="font-bold text-sm text-orange-200">218.25 SOL</h4>
+            <h4 className="font-bold text-sm text-orange-200">219.25 SOL</h4>
             <h4 className="font-bold text-sm text-orange-200">250 SOL</h4>
           </div>
 
