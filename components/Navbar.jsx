@@ -85,6 +85,9 @@ export default function Navbar() {
                 <DropdownItem>
                   <Button  className="text-white/50 hover:text-white" onClick={() => handleLinkClick('/')} variant="light">BOTs</Button>
                 </DropdownItem>
+                   <DropdownItem>
+                  <Button  className="text-white/50 hover:text-white" onClick={() => handleLinkClick('/')} variant="light">DAO</Button>
+                </DropdownItem>
                 <DropdownItem>
                   <Button  className="text-white/50 hover:text-white" onClick={() => handleLinkClick('https://docs.unibonk.meme')} variant="light">Docs</Button>
                 </DropdownItem>
