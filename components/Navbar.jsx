@@ -44,6 +44,9 @@ export default function Navbar() {
           <li className="">
             <Button className="text-white/50 hover:text-white bg-transparent hover:bg-orange-400/70 text-[18px]">BOTs</Button>
           </li>
+            <li className="">
+            <Button className="text-white/50 hover:text-white bg-transparent hover:bg-orange-400/70 text-[18px]">DAO</Button>
+          </li>
           <li className="">
             <Link href='https://docs.unibonk.meme' target="_blank">
               <Button className="text-white/50 hover:text-white bg-transparent hover:bg-orange-400/70 text-[18px]">Docs</Button>
